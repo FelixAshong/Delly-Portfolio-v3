@@ -4,37 +4,35 @@
 
 @layer base {
   :root {
-    --ghana-red: 0 92% 44%;
-    --ghana-yellow: 48 90% 55%;
-    --ghana-green: 147 100% 22%;
+    --orange-primary: 24 100% 50%;
     
-    --background: 222.2 47.4% 11.2%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
     
-    --card: 217.2 32.6% 17.5%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
     
-    --popover: 222.2 47.4% 11.2%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
     
-    --primary: var(--ghana-yellow);
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--orange-primary);
+    --primary-foreground: 0 0% 0%;
     
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
     
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--orange-primary);
+    --accent-foreground: 0 0% 0%;
     
-    --destructive: var(--ghana-red);
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: var(--ghana-yellow);
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: var(--orange-primary);
     
     --radius: 0.5rem;
   }

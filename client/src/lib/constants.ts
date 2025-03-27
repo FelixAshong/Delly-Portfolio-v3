@@ -15,11 +15,36 @@ export const BACKEND_SKILLS = [
 ];
 
 export const TOOLS = [
-  { name: "Git & GitHub", percentage: 92 },
-  { name: "Docker", percentage: 85 },
-  { name: "AWS", percentage: 80 },
-  { name: "Figma", percentage: 88 },
-  { name: "Jest", percentage: 78 }
+  { 
+    name: "Git & GitHub", 
+    percentage: 92,
+    icon: "🔄"
+  },
+  { 
+    name: "Docker", 
+    percentage: 85,
+    icon: "🐳"
+  },
+  { 
+    name: "AWS", 
+    percentage: 80,
+    icon: "☁️"
+  },
+  { 
+    name: "Figma", 
+    percentage: 88,
+    icon: "🎨"
+  },
+  { 
+    name: "Jest", 
+    percentage: 78,
+    icon: "🧪"
+  },
+  { 
+    name: "VS Code", 
+    percentage: 90,
+    icon: "📝"
+  }
 ];
 
 export const SERVICES = [

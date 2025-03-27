@@ -1,12 +1,25 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
+import NotFound from "./pages/not-found";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import CV from "./pages/CV";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/skills" component={Skills} />
+      <Route path="/projects" component={Projects} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/cv" component={CV} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
@@ -14,11 +27,18 @@ function Router() {
 }
 
 function App() {
+  const [location] = useLocation();
+  
   return (
-    <>
-      <Router />
+    <div className="flex flex-col min-h-screen bg-black text-white">
+      <Header />
+      <main className="flex-grow">
+        <Router />
+      </main>
+      <Footer />
+      <ScrollToTop />
       <Toaster />
-    </>
+    </div>
   );
 }
 
