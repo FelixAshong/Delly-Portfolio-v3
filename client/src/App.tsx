@@ -31,7 +31,7 @@ function App() {
   const [location] = useLocation();
   
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground">
+    <div className="flex flex-col min-h-screen text-foreground bg-transparent">
       <Header />
       <main className="flex-grow">
         <Router />

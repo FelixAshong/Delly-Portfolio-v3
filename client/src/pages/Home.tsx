@@ -92,7 +92,7 @@ const Home = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+          <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-8 hover-float hover-glow">
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"></path><path d="M7 22h1a4 4 0 0 0 4-4v-1"></path><path d="M7 2h1a4 4 0 0 1 4 4v1"></path></svg>
             </div>
@@ -102,7 +102,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+          <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-8 hover-float hover-glow">
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
             </div>
@@ -112,7 +112,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+          <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-8 hover-float hover-glow">
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
             </div>
@@ -129,7 +129,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="py-16 bg-card rounded-lg p-8"
+        className="py-16 bg-black/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-8"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Technologies I Work With</h2>
         
@@ -171,28 +171,28 @@ const Home = () => {
         {/* Background gradient for stats section */}
         <div className="bg-gradient-3 absolute w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 z-0"></div>
         
-        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+        <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
             <CountUp end={3} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Years Experience</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+        <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
             <CountUp end={20} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Projects Completed</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+        <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
             <CountUp end={15} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Happy Clients</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+        <div className="bg-black/10 dark:bg-white/5 backdrop-blur-sm p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
             <CountUp end={5} suffix="+" />
           </h3>
