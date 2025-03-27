@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import CursorPatternBackground from "@/components/CursorPatternBackground";
+import NeonBubbles from "@/components/NeonBubbles";
 
 function Router() {
   return (
@@ -44,6 +45,13 @@ function App() {
         particleCount={70}
         lineLength={100}
         speed={0.3}
+      />
+      <NeonBubbles 
+        bubbleCount={15}
+        colors={['#ff6b00', '#ff9500', '#ffb700', '#ff5100', '#ff3c00']}
+        minSize={10}
+        maxSize={60}
+        speed={0.5}
       />
     </div>
   );
