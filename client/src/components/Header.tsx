@@ -42,10 +42,8 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center space-x-2 cursor-pointer">
-              <span className="font-heading font-bold text-xl text-white">PhleoDelly</span>
-            </a>
+          <Link href="/" className="flex items-center space-x-2 cursor-pointer">
+            <span className="font-heading font-bold text-xl text-white">PhleoDelly</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -54,21 +52,22 @@ const Header = () => {
               <Link 
                 key={link.name}
                 href={link.href}
+                className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm`}
               >
-                <a className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm`}>
-                  {link.name}
-                </a>
+                {link.name}
               </Link>
             ))}
-            <Link href="/contact">
-              <a className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors ml-2">
-                Hire Me
-              </a>
+            <Link 
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors ml-2"
+            >
+              Hire Me
             </Link>
-            <Link href="/cv">
-              <a className="bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded text-sm font-medium transition-colors">
-                Online CV
-              </a>
+            <Link 
+              href="/cv"
+              className="bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded text-sm font-medium transition-colors"
+            >
+              Online CV
             </Link>
           </nav>
           
@@ -102,30 +101,25 @@ const Header = () => {
                 <Link 
                   key={link.name}
                   href={link.href}
+                  className={`block py-2 px-4 ${isActive(link.href) ? 'bg-primary/10 text-primary' : 'text-muted-foreground'} hover:bg-muted rounded-md transition-colors`}
+                  onClick={closeMenu}
                 >
-                  <a 
-                    className={`block py-2 px-4 ${isActive(link.href) ? 'bg-primary/10 text-primary' : 'text-muted-foreground'} hover:bg-muted rounded-md transition-colors`}
-                    onClick={closeMenu}
-                  >
-                    {link.name}
-                  </a>
+                  {link.name}
                 </Link>
               ))}
-              <Link href="/contact">
-                <a 
-                  className="block py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium mt-2"
-                  onClick={closeMenu}
-                >
-                  Hire Me
-                </a>
+              <Link 
+                href="/contact"
+                className="block py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium mt-2"
+                onClick={closeMenu}
+              >
+                Hire Me
               </Link>
-              <Link href="/cv">
-                <a 
-                  className="block py-2 px-4 bg-primary hover:bg-primary/90 text-black rounded-md font-medium mt-2"
-                  onClick={closeMenu}
-                >
-                  Online CV
-                </a>
+              <Link 
+                href="/cv"
+                className="block py-2 px-4 bg-primary hover:bg-primary/90 text-black rounded-md font-medium mt-2"
+                onClick={closeMenu}
+              >
+                Online CV
               </Link>
             </div>
           </motion.div>
