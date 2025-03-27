@@ -5,21 +5,30 @@ import { useEffect, useState } from "react";
 const CV = () => {
   // Function to handle CV download
   const handleDownloadCV = () => {
-    // Create a link element
-    const link = document.createElement('a');
-    
-    // Path to the actual CV PDF (stored in the public folder)
-    link.href = '/assets/Felix-Ashong-CV.pdf';
-    
-    // Set the download attribute with the desired filename
-    link.download = 'Felix-Ashong-CV.pdf';
-    
-    // Simulate a click on the link to trigger the download
-    document.body.appendChild(link);
-    link.click();
-    
-    // Clean up
-    document.body.removeChild(link);
+    try {
+      // Create a link element
+      const link = document.createElement('a');
+      
+      // Path to the actual CV PDF (stored in the public folder)
+      link.href = '/assets/placeholder-CV.pdf';
+      
+      // Set the download attribute with the desired filename
+      link.download = 'Felix-Ashong-CV.pdf';
+      link.target = '_blank'; // Open in new tab as fallback
+      
+      // Simulate a click on the link to trigger the download
+      document.body.appendChild(link);
+      link.click();
+      
+      // Clean up
+      setTimeout(() => {
+        document.body.removeChild(link);
+      }, 100);
+      
+      console.log('Download initiated');
+    } catch (error) {
+      console.error('Download error:', error);
+    }
   };
   
   // Animated background canvas effect for page
@@ -139,13 +148,16 @@ const CV = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary">FELIX ASHONG</h1>
         </div>
         
-        <button 
-          onClick={handleDownloadCV}
-          className="crystal-btn text-black font-medium"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-          Download CV
-        </button>
+        <div className="flex flex-col items-end space-y-1">
+          <button 
+            onClick={handleDownloadCV}
+            className="crystal-btn text-black font-medium"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+            Download CV
+          </button>
+          <p className="text-xs text-muted-foreground italic">This is a placeholder. Your actual CV will be used.</p>
+        </div>
       </motion.div>
       
       <div className="bg-card rounded-lg p-8 mb-16">

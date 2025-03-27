@@ -66,8 +66,12 @@ const Home = () => {
           className="md:w-1/2 flex justify-center"
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-4 rounded-full bg-card flex items-center justify-center">
-              <span className="text-8xl font-bold text-primary">FA</span>
+            <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-primary">
+              <img 
+                src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1000&auto=format&fit=crop" 
+                alt="Felix Ashong" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </motion.div>
