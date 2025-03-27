@@ -10,7 +10,7 @@ import CV from "@/pages/CV";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import AnimatedBackground from "@/components/AnimatedBackground";
+import CursorPatternBackground from "@/components/CursorPatternBackground";
 
 function Router() {
   return (
@@ -31,7 +31,7 @@ function App() {
   const [location] = useLocation();
   
   return (
-    <div className="flex flex-col min-h-screen text-foreground bg-transparent">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
       <main className="flex-grow">
         <Router />
@@ -39,7 +39,12 @@ function App() {
       <Footer />
       <ScrollToTop />
       <Toaster />
-      <AnimatedBackground />
+      <CursorPatternBackground 
+        color="#ff6b00"
+        particleCount={70}
+        lineLength={100}
+        speed={0.3}
+      />
     </div>
   );
 }
