@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useEffect, useState, useRef } from "react";
+import CountUp from "@/components/CountUp";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 relative">
+      {/* Background gradient effects */}
+      <div className="bg-gradient-1 absolute w-[400px] h-[400px] -top-20 -left-20 opacity-20 z-0"></div>
+      <div className="bg-gradient-2 absolute w-[400px] h-[400px] -bottom-20 -right-20 opacity-20 z-0"></div>
+      
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32">
+      <section className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32 relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -160,25 +167,36 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="py-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+        className="py-16 grid grid-cols-2 md:grid-cols-4 gap-6 relative"
       >
-        <div className="bg-card p-6 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-primary mb-2">3+</h3>
+        {/* Background gradient for stats section */}
+        <div className="bg-gradient-3 absolute w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 z-0"></div>
+        
+        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+          <h3 className="text-4xl font-bold text-primary mb-2">
+            <CountUp end={3} suffix="+" />
+          </h3>
           <p className="text-muted-foreground">Years Experience</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-primary mb-2">20+</h3>
+        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+          <h3 className="text-4xl font-bold text-primary mb-2">
+            <CountUp end={20} suffix="+" />
+          </h3>
           <p className="text-muted-foreground">Projects Completed</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-primary mb-2">15+</h3>
+        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+          <h3 className="text-4xl font-bold text-primary mb-2">
+            <CountUp end={15} suffix="+" />
+          </h3>
           <p className="text-muted-foreground">Happy Clients</p>
         </div>
         
-        <div className="bg-card p-6 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-primary mb-2">5+</h3>
+        <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+          <h3 className="text-4xl font-bold text-primary mb-2">
+            <CountUp end={5} suffix="+" />
+          </h3>
           <p className="text-muted-foreground">Tech Stack</p>
         </div>
       </motion.section>
@@ -188,17 +206,21 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="py-16 text-center mb-8"
+        className="py-16 text-center mb-8 relative"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to start your project?</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-          Let's work together to bring your ideas to life. I'm available for freelance projects and full-time opportunities.
-        </p>
-        <Button asChild className="bg-primary hover:bg-primary/90 text-black px-8 py-6 text-lg">
-          <Link href="/contact">
-            <a>Get In Touch</a>
-          </Link>
-        </Button>
+        <div className="bg-gradient-2 absolute w-[400px] h-[400px] -bottom-60 left-[30%] opacity-20 z-0"></div>
+        
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Ready to start your project?</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
+            Let's work together to bring your ideas to life. I'm available for freelance projects and full-time opportunities.
+          </p>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-black px-8 py-6 text-lg glow">
+            <Link href="/contact">
+              <a>Get In Touch</a>
+            </Link>
+          </Button>
+        </div>
       </motion.section>
     </div>
   );

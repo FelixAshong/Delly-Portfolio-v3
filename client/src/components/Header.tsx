@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "wouter";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,6 +70,9 @@ const Header = () => {
             >
               Online CV
             </Link>
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </nav>
           
           {/* Mobile menu button */}
@@ -121,6 +125,9 @@ const Header = () => {
               >
                 Online CV
               </Link>
+              <div className="py-2 px-4 mt-2 flex justify-start">
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}

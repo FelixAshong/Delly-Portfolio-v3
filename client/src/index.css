@@ -6,6 +6,45 @@
   :root {
     --orange-primary: 24 100% 50%;
     
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    
+    --primary: var(--orange-primary);
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    
+    --accent: var(--orange-primary);
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: var(--orange-primary);
+    
+    --radius: 0.5rem;
+    
+    /* Ghana colors */
+    --ghana-red: 0 100% 50%;
+    --ghana-yellow: 51 100% 50%;
+    --ghana-green: 120 61% 33.7%;
+  }
+
+  .dark {
+    --orange-primary: 24 100% 50%;
+    
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     
@@ -34,15 +73,25 @@
     --input: 0 0% 20%;
     --ring: var(--orange-primary);
     
-    --radius: 0.5rem;
+    /* Ghana colors */
+    --ghana-red: 0 100% 50%;
+    --ghana-yellow: 51 100% 50%;
+    --ghana-green: 120 61% 33.7%;
   }
   
   * {
     @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   html {
+    font-family: "Work Sans", "Inter", sans-serif;
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   body {
@@ -66,6 +115,63 @@
   .skill-bar .progress {
     @apply transition-all duration-1000;
   }
+  
+  .text-gradient {
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.62) 106.5%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  /* Background gradients */
+  .bg-gradient-1 {
+    background: linear-gradient(
+        236.22deg,
+        #ff3c47 -3.32%,
+        #eec850 12.21%,
+        #3257ed 73.4%
+    );
+    filter: blur(187px);
+  }
+  
+  .bg-gradient-2 {
+    background: linear-gradient(
+        90deg,
+        #e65300 7.99%,
+        #e7af00 47.79%,
+        #006be9 86.72%
+    );
+    filter: blur(187px);
+  }
+  
+  .bg-gradient-3 {
+    background: linear-gradient(
+        236.22deg,
+        #ff3c47 -3.32%,
+        #bcee50 15.86%,
+        #32e2ed 73.4%
+    );
+    filter: blur(212px);
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .path {
+    stroke: hsl(var(--primary));
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
 }
 
 /* Custom scrollbar */
@@ -83,4 +189,43 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-muted-foreground;
+}
+
+/* Animation keyframes */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Media query for mobile CV button */
+@media screen and (min-width: 768px) {
+  .mobile-cv-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-cv-button {
+    display: inline-block;
+  }
+  
+  .online-cv-button {
+    display: none;
+  }
 }
