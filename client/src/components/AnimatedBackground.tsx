@@ -46,21 +46,21 @@ const AnimatedBackground = () => {
     ];
     
     const bubbles: Bubble[] = [];
-    const bubbleCount = 20; // Number of bubbles
+    const bubbleCount = 80; // Many more small bubbles
     
     // Create bubbles
     for (let i = 0; i < bubbleCount; i++) {
-      const size = Math.random() * 120 + 50; // Larger bubbles
+      const size = Math.random() * 8 + 2; // Tiny bubbles
       bubbles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size,
         color: colors[Math.floor(Math.random() * colors.length)],
-        speedX: (Math.random() - 0.5) * 0.3, // Slower movement
-        speedY: (Math.random() - 0.5) * 0.3,
+        speedX: (Math.random() - 0.5) * 0.1, // Very slow, gentle movement
+        speedY: (Math.random() - 0.5) * 0.1,
         rotation: Math.random() * Math.PI * 2,
-        rotationSpeed: (Math.random() - 0.5) * 0.01,
-        opacity: Math.random() * 0.4 + 0.15 // More visible
+        rotationSpeed: (Math.random() - 0.5) * 0.002,
+        opacity: Math.random() * 0.2 + 0.05 // Very subtle visibility
       });
     }
     
@@ -122,52 +122,14 @@ const AnimatedBackground = () => {
         ctx.arc(0, 0, bubble.size, 0, Math.PI * 2);
         ctx.fill();
         
-        // Draw geometric shape inside
-        ctx.strokeStyle = `${bubble.color}`;
-        ctx.lineWidth = 2;
-        ctx.globalAlpha = bubble.opacity * 1.5;
-        
-        // Draw a hexagon inside
-        ctx.beginPath();
-        const innerSize = bubble.size * 0.5;
-        for (let i = 0; i < 6; i++) {
-          const angle = (i * Math.PI * 2) / 6;
-          const x = innerSize * Math.cos(angle);
-          const y = innerSize * Math.sin(angle);
-          
-          if (i === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
-        }
-        ctx.closePath();
-        ctx.stroke();
-        
-        // Add intersecting lines for more complexity
-        ctx.beginPath();
-        for (let i = 0; i < 3; i++) {
-          const angle1 = (i * Math.PI * 2) / 3;
-          const angle2 = (i * Math.PI * 2 + Math.PI) / 3;
-          
-          const x1 = innerSize * Math.cos(angle1);
-          const y1 = innerSize * Math.sin(angle1);
-          const x2 = innerSize * Math.cos(angle2);
-          const y2 = innerSize * Math.sin(angle2);
-          
-          ctx.moveTo(x1, y1);
-          ctx.lineTo(x2, y2);
-        }
-        ctx.stroke();
-        
-        // Draw pulsing center
+        // Just a simple dot in the center for the smallest bubbles
         const time = Date.now() / 1000;
-        const pulseSize = (Math.sin(time * 2 + bubble.x + bubble.y) * 0.2 + 0.8) * innerSize * 0.3;
+        const pulseSize = (Math.sin(time * 2 + bubble.x + bubble.y) * 0.2 + 0.8) * bubble.size * 0.3;
         
         ctx.beginPath();
         ctx.arc(0, 0, pulseSize, 0, Math.PI * 2);
         ctx.fillStyle = bubble.color;
-        ctx.globalAlpha = bubble.opacity * 2;
+        ctx.globalAlpha = bubble.opacity * 1.5;
         ctx.fill();
         
         ctx.restore();
