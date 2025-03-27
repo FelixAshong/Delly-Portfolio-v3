@@ -6,32 +6,32 @@
   :root {
     --orange-primary: 24 100% 50%;
     
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
     
-    --card: 0 0% 95%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 222 47% 11%;
     
     --primary: var(--orange-primary);
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 210 40% 98%;
     
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
     
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     
     --accent: var(--orange-primary);
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 210 40% 98%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
     
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: var(--orange-primary);
     
     --radius: 0.5rem;
@@ -112,11 +112,72 @@
     box-shadow: 0 0 15px rgba(252, 209, 22, 0.3);
   }
   
+  /* Enhanced hover effects */
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-float {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.4);
+  }
+  
+  .glow-on-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glow-on-hover::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .glow-on-hover:hover::after {
+    opacity: 0.5;
+  }
+  
   .skill-bar .progress {
     @apply transition-all duration-1000;
   }
   
   .text-gradient {
+    background: linear-gradient(
+        180deg,
+        hsl(var(--foreground)) 0%,
+        hsl(var(--primary)) 106.5%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .dark .text-gradient {
     background: linear-gradient(
         180deg,
         #ffffff 0%,

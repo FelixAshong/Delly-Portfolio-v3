@@ -91,31 +91,31 @@ const Home = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-card rounded-lg p-8 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"></path><path d="M7 22h1a4 4 0 0 0 4-4v-1"></path><path d="M7 2h1a4 4 0 0 1 4 4v1"></path></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Web Development</h3>
+            <h3 className="text-xl font-bold mb-4 dark:text-white">Web Development</h3>
             <p className="text-muted-foreground">
               Creating responsive websites that work seamlessly across all devices using modern frameworks and best practices.
             </p>
           </div>
           
-          <div className="bg-card rounded-lg p-8 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Application Development</h3>
+            <h3 className="text-xl font-bold mb-4 dark:text-white">Application Development</h3>
             <p className="text-muted-foreground">
               Building feature-rich web applications with clean architecture, efficient data management, and intuitive user interfaces.
             </p>
           </div>
           
-          <div className="bg-card rounded-lg p-8 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="bg-card rounded-lg p-8 hover-float hover-glow">
+            <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">API Development</h3>
+            <h3 className="text-xl font-bold mb-4 dark:text-white">API Development</h3>
             <p className="text-muted-foreground">
               Designing and implementing robust APIs that enable seamless integration between systems and services.
             </p>
@@ -133,23 +133,23 @@ const Home = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Technologies I Work With</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">React</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">React</h3>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">Node.js</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">Node.js</h3>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">TypeScript</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">TypeScript</h3>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">Next.js</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">Next.js</h3>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">MongoDB</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">MongoDB</h3>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 text-center">
-            <h3 className="text-white font-medium">Tailwind CSS</h3>
+          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="dark:text-white text-foreground font-medium">Tailwind CSS</h3>
           </div>
         </div>
 
