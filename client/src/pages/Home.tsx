@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { useEffect, useState, useRef } from "react";
 import CountUp from "@/components/CountUp";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import GlowingProfileImage from "@/components/GlowingProfileImage";
 
 const Home = () => {
   return (
@@ -65,14 +66,14 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="md:w-1/2 flex justify-center"
         >
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-primary">
-              <img 
-                src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1000&auto=format&fit=crop" 
-                alt="Felix Ashong" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="w-72 h-72 md:w-96 md:h-96">
+            <GlowingProfileImage 
+              imageUrl="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1000&auto=format&fit=crop"
+              altText="Felix Ashong"
+              glowColor="#ff6b00"
+              glowIntensity={0.8}
+              className="w-full h-full"
+            />
           </div>
         </motion.div>
       </section>

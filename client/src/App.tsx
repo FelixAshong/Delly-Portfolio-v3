@@ -10,6 +10,7 @@ import CV from "@/pages/CV";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import CursorPatternBackground from "@/components/CursorPatternBackground";
 
 function Router() {
   return (
@@ -38,6 +39,12 @@ function App() {
       <Footer />
       <ScrollToTop />
       <Toaster />
+      <CursorPatternBackground 
+        color="#ff6b00"
+        particleCount={70}
+        lineLength={100}
+        speed={0.3}
+      />
     </div>
   );
 }
