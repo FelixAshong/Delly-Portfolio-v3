@@ -22,7 +22,7 @@ const Home = () => {
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="text-white">Hi, I'm </span>
-            <span className="text-primary">Felix Ashong</span>
+            <span className="text-styled">Felix Ashong</span>
           </h1>
           
           <div className="mb-6">
@@ -50,16 +50,12 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4"
           >
-            <Button asChild className="bg-primary hover:bg-primary/90 text-black px-6 py-6 text-base">
-              <Link href="/projects">
-                <a>View My Work</a>
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black px-6 py-6 text-base">
-              <Link href="/contact">
-                <a>Contact Me</a>
-              </Link>
-            </Button>
+            <Link href="/projects" className="crystal-btn text-black px-6 py-4 text-base font-medium block">
+              View My Work
+            </Link>
+            <Link href="/contact" className="crystal-btn border-primary text-primary hover:text-black px-6 py-4 text-base font-medium block">
+              Contact Me
+            </Link>
           </motion.div>
         </motion.div>
         
@@ -154,11 +150,9 @@ const Home = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black">
-            <Link href="/skills">
-              <a>View All Skills</a>
-            </Link>
-          </Button>
+          <Link href="/skills" className="crystal-btn border-primary text-primary hover:text-black inline-block px-6 py-3 font-medium">
+            View All Skills
+          </Link>
         </div>
       </motion.section>
 
@@ -215,11 +209,9 @@ const Home = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Let's work together to bring your ideas to life. I'm available for freelance projects and full-time opportunities.
           </p>
-          <Button asChild className="bg-primary hover:bg-primary/90 text-black px-8 py-6 text-lg glow">
-            <Link href="/contact">
-              <a>Get In Touch</a>
-            </Link>
-          </Button>
+          <Link href="/contact" className="crystal-btn text-black px-8 py-6 text-lg font-medium">
+            Get In Touch
+          </Link>
         </div>
       </motion.section>
     </div>

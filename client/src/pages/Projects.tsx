@@ -114,25 +114,29 @@ const Projects = () => {
         <div className="flex overflow-x-auto space-x-4 py-4 mb-12">
           <button 
             onClick={() => setFilter("All")}
-            className={`px-6 py-2 ${filter === "All" ? "bg-primary text-black" : "bg-card hover:bg-card/80"} text-foreground dark:text-white font-medium cursor-pointer rounded-md transition-all duration-300 glow-on-hover`}
+            className={`crystal-btn px-6 py-2 ${filter === "All" ? "" : "border-primary text-primary hover:text-black"} font-medium cursor-pointer rounded-md transition-all duration-300`}
+            style={filter === "All" ? { background: "#FFA500", color: "black" } : {}}
           >
             All
           </button>
           <button 
             onClick={() => setFilter("Web Development")}
-            className={`px-6 py-2 ${filter === "Web Development" ? "bg-primary text-black" : "bg-card hover:bg-card/80"} text-foreground dark:text-white font-medium cursor-pointer rounded-md transition-all duration-300 glow-on-hover`}
+            className={`crystal-btn px-6 py-2 ${filter === "Web Development" ? "" : "border-primary text-primary hover:text-black"} font-medium cursor-pointer rounded-md transition-all duration-300`}
+            style={filter === "Web Development" ? { background: "#FFA500", color: "black" } : {}}
           >
             Web Development
           </button>
           <button 
             onClick={() => setFilter("Mobile Apps")}
-            className={`px-6 py-2 ${filter === "Mobile Apps" ? "bg-primary text-black" : "bg-card hover:bg-card/80"} text-foreground dark:text-white font-medium cursor-pointer rounded-md transition-all duration-300 glow-on-hover`}
+            className={`crystal-btn px-6 py-2 ${filter === "Mobile Apps" ? "" : "border-primary text-primary hover:text-black"} font-medium cursor-pointer rounded-md transition-all duration-300`}
+            style={filter === "Mobile Apps" ? { background: "#FFA500", color: "black" } : {}}
           >
             Mobile Apps
           </button>
           <button 
             onClick={() => setFilter("UI/UX Design")}
-            className={`px-6 py-2 ${filter === "UI/UX Design" ? "bg-primary text-black" : "bg-card hover:bg-card/80"} text-foreground dark:text-white font-medium cursor-pointer rounded-md transition-all duration-300 glow-on-hover`}
+            className={`crystal-btn px-6 py-2 ${filter === "UI/UX Design" ? "" : "border-primary text-primary hover:text-black"} font-medium cursor-pointer rounded-md transition-all duration-300`}
+            style={filter === "UI/UX Design" ? { background: "#FFA500", color: "black" } : {}}
           >
             UI/UX Design
           </button>
@@ -151,14 +155,14 @@ const Projects = () => {
                 <span className="text-muted-foreground">Project Image</span>
               </div>
               <div className="p-6">
-                <h3 className="text-foreground dark:text-white text-xl font-bold mb-3">{project.title}</h3>
+                <h3 className="text-styled text-xl font-bold mb-3">{project.title}</h3>
                 <p className="text-muted-foreground mb-5">{project.description}</p>
                 <div className="flex space-x-4">
                   <a 
                     href={project.codeLink}
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-transparent border border-primary text-primary hover:bg-primary hover:text-black h-9 px-3 py-2"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium crystal-btn text-primary hover:text-black h-9 px-3 py-2"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
                     Code
@@ -167,7 +171,7 @@ const Projects = () => {
                     href={project.demoLink}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-transparent border border-primary text-primary hover:bg-primary hover:text-black h-9 px-3 py-2"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium crystal-btn text-primary hover:text-black h-9 px-3 py-2"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
                     Demo
@@ -188,14 +192,14 @@ const Projects = () => {
               <span className="text-muted-foreground">Project Image</span>
             </div>
             <div className="p-6">
-              <h3 className="text-white text-xl font-bold mb-3">Weather App</h3>
+              <h3 className="text-styled text-xl font-bold mb-3">Weather App</h3>
               <p className="text-muted-foreground mb-5">Real-time weather application with location-based forecasts and alerts.</p>
               <div className="flex space-x-4">
                 <a 
                   href="https://github.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-transparent border border-primary text-primary hover:bg-primary hover:text-black h-9 px-3 py-2"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium crystal-btn text-primary hover:text-black h-9 px-3 py-2"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
                   Code
@@ -204,7 +208,7 @@ const Projects = () => {
                   href="https://demo-site.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-transparent border border-primary text-primary hover:bg-primary hover:text-black h-9 px-3 py-2"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium crystal-btn text-primary hover:text-black h-9 px-3 py-2"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
                   Demo

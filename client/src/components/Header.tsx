@@ -60,13 +60,14 @@ const Header = () => {
             ))}
             <Link 
               href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors ml-2"
+              className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium ml-2"
+              style={{ background: "#2563eb" }}
             >
               Hire Me
             </Link>
             <Link 
               href="/cv"
-              className="bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded text-sm font-medium transition-colors"
+              className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium"
             >
               Online CV
             </Link>
@@ -113,14 +114,15 @@ const Header = () => {
               ))}
               <Link 
                 href="/contact"
-                className="block py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium mt-2"
+                className="block crystal-btn w-full py-2 px-4 text-black rounded-md font-medium mt-2 text-center"
+                style={{ background: "#2563eb" }}
                 onClick={closeMenu}
               >
                 Hire Me
               </Link>
               <Link 
                 href="/cv"
-                className="block py-2 px-4 bg-primary hover:bg-primary/90 text-black rounded-md font-medium mt-2"
+                className="block crystal-btn w-full py-2 px-4 text-black rounded-md font-medium mt-2 text-center"
                 onClick={closeMenu}
               >
                 Online CV

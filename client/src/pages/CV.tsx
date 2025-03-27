@@ -1,20 +1,151 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const CV = () => {
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    
+    // Path to the actual CV PDF (stored in the public folder)
+    link.href = '/assets/Felix-Ashong-CV.pdf';
+    
+    // Set the download attribute with the desired filename
+    link.download = 'Felix-Ashong-CV.pdf';
+    
+    // Simulate a click on the link to trigger the download
+    document.body.appendChild(link);
+    link.click();
+    
+    // Clean up
+    document.body.removeChild(link);
+  };
+  
+  // Animated background canvas effect for page
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+    
+    if (typeof window !== 'undefined') {
+      const canvas = document.getElementById('background-canvas') as HTMLCanvasElement;
+      if (!canvas) return;
+      
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      
+      const resizeCanvas = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      };
+      
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+      
+      const particles: {x: number; y: number; size: number; speedX: number; speedY: number}[] = [];
+      const particleCount = 50;
+      
+      // Create particles
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          size: Math.random() * 2 + 0.5,
+          speedX: Math.random() * 0.5 - 0.25,
+          speedY: Math.random() * 0.5 - 0.25
+        });
+      }
+      
+      const animate = () => {
+        ctx.clearRect(0, 0, width, height);
+        
+        // Draw and update particles
+        ctx.fillStyle = '#ff6b00';
+        ctx.strokeStyle = '#ff6b00';
+        ctx.lineWidth = 0.3;
+        
+        particles.forEach((particle, i) => {
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.fill();
+          
+          // Connect particles with lines if they're close enough
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[j].x - particle.x;
+            const dy = particles[j].y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+          
+          // Update position
+          particle.x += particle.speedX;
+          particle.y += particle.speedY;
+          
+          // Bounce off edges
+          if (particle.x < 0 || particle.x > width) particle.speedX *= -1;
+          if (particle.y < 0 || particle.y > height) particle.speedY *= -1;
+        });
+        
+        requestAnimationFrame(animate);
+      };
+      
+      animate();
+      
+      return () => {
+        window.removeEventListener('resize', resizeCanvas);
+      };
+    }
+  }, [mounted]);
+
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 relative">
+      {/* Animated background canvas */}
+      <canvas id="background-canvas" className="fixed top-0 left-0 w-full h-full -z-10 opacity-20"></canvas>
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex justify-between items-center mb-8"
+        className="flex flex-col md:flex-row justify-between items-center md:items-start mb-8 gap-4"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">FELIX ASHONG</h1>
-        <Button className="bg-primary hover:bg-primary/90 text-black">
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          {/* Profile Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary mb-4 md:mb-0"
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1000&auto=format&fit=crop" 
+              alt="Felix Ashong" 
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-primary">FELIX ASHONG</h1>
+        </div>
+        
+        <button 
+          onClick={handleDownloadCV}
+          className="crystal-btn text-black font-medium"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
           Download CV
-        </Button>
+        </button>
       </motion.div>
       
       <div className="bg-card rounded-lg p-8 mb-16">
