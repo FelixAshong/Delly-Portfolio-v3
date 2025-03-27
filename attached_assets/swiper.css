@@ -1,0 +1,52 @@
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #666;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.testimonial-swiper {
+  padding-bottom: 40px;
+}
+
+.testimonial-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.light .swiper-pagination-bullet {
+  background: #999;
+}
+
+.light .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/* Add navigation arrows styling */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary) !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+}
+
+/* Fade effect for slides */
+.swiper-slide {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
