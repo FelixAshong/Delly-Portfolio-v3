@@ -73,6 +73,10 @@ const Home = () => {
               glowColor="#ff6b00"
               glowIntensity={0.8}
               className="w-full h-full"
+              onError={(e) => {
+                console.error('Failed to load profile image');
+                e.currentTarget.src = '/assets/profile/fallback.png';
+              }}
             />
           </div>
         </motion.div>
