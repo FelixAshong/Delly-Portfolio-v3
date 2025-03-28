@@ -496,3 +496,57 @@
     @apply opacity-10;
   }
 }
+
+/* Responsive Container and Spacing */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full;
+}
+
+/* Responsive Spacing Utilities */
+.section-padding {
+  @apply py-12 sm:py-16 md:py-20 lg:py-24;
+}
+
+.content-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive Grid Gaps */
+.grid-gap {
+  @apply gap-4 sm:gap-6 md:gap-8;
+}
+
+/* Responsive Margins */
+.section-margin {
+  @apply mb-12 sm:mb-16 md:mb-20 lg:mb-24;
+}
+
+/* Responsive Text Alignment */
+.text-center-responsive {
+  @apply text-center sm:text-left md:text-center lg:text-left;
+}
+
+/* Responsive Flex Layouts */
+.flex-responsive {
+  @apply flex flex-col sm:flex-row;
+}
+
+/* Responsive Grid Layouts */
+.grid-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Responsive Image Sizing */
+.img-responsive {
+  @apply w-full h-auto max-w-full;
+}
+
+/* Responsive Card Layouts */
+.card-responsive {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+/* Responsive Button Sizing */
+.btn-responsive {
+  @apply px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base;
+}
