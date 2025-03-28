@@ -39,8 +39,8 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : 'bg-background'} border-b border-border transition-all duration-300`}>
-      <div className="container mx-auto px-6 py-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'bg-background/95 backdrop-blur-sm' : 'bg-background'} border-b border-border transition-all duration-300 w-full`}>
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
@@ -53,21 +53,21 @@ const Header = () => {
               <Link 
                 key={link.name}
                 href={link.href}
-                className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm`}
+                className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm whitespace-nowrap`}
               >
                 {link.name}
               </Link>
             ))}
             <Link 
               href="/contact"
-              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium ml-2"
+              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium ml-2 whitespace-nowrap"
               style={{ background: "#2563eb" }}
             >
               Hire Me
             </Link>
             <Link 
               href="/cv"
-              className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium"
+              className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
             >
               Online CV
             </Link>
@@ -104,7 +104,7 @@ const Header = () => {
               onClick={closeMenu}
             />
             <motion.div 
-              className="md:hidden fixed top-[72px] left-0 w-full bg-card border-b border-border z-50"
+              className="md:hidden fixed top-[72px] left-0 right-0 w-full bg-card border-b border-border z-50 overflow-y-auto max-h-[calc(100vh-72px)]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
