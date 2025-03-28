@@ -131,23 +131,65 @@ const Home = () => {
         <h2 className="text-2xl md:text-4xl font-bold text-primary mb-8 md:mb-12 text-center">Technologies I Work With</h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <h3 className="text-foreground font-medium">React</h3>
           </div>
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <h3 className="text-foreground font-medium">Node.js</h3>
           </div>
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <h3 className="text-foreground font-medium">TypeScript</h3>
           </div>
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <h3 className="text-foreground font-medium">Next.js</h3>
           </div>
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <h3 className="text-foreground font-medium">MongoDB</h3>
           </div>
-          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="text-foreground font-medium">Tailwind CSS</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow flex flex-col items-center justify-center h-32">
+            <div className="mb-3">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                alt="Figma"
+                className="w-12 h-12 object-contain"
+              />
+            </div>
+            <h3 className="text-foreground font-medium">Figma</h3>
           </div>
         </div>
 
