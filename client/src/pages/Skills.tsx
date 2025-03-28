@@ -18,7 +18,7 @@ const SkillBar = ({ name, percentage, color, delay }: SkillBarProps) => {
       className="mb-6"
     >
       <div className="flex justify-between items-center mb-2">
-        <h3 className="text-white font-medium">{name}</h3>
+        <h3 className="text-foreground font-medium">{name}</h3>
         <span className="text-muted-foreground">{percentage}%</span>
       </div>
       <Progress 
@@ -52,7 +52,7 @@ const Skills = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl font-bold text-white mb-8"
+            className="text-3xl font-bold text-foreground mb-8"
           >
             Frontend Development
           </motion.h2>
@@ -73,7 +73,7 @@ const Skills = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl font-bold text-white mb-8"
+            className="text-3xl font-bold text-foreground mb-8"
           >
             Backend Development
           </motion.h2>
@@ -96,7 +96,7 @@ const Skills = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mb-16"
       >
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">Tools & Technologies</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Tools & Technologies</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {TOOLS.map((tool, index) => (
@@ -110,7 +110,7 @@ const Skills = () => {
               <div className="text-primary text-3xl mb-3">
                 {tool.icon}
               </div>
-              <h3 className="text-white font-medium">{tool.name}</h3>
+              <h3 className="text-foreground font-medium">{tool.name}</h3>
             </motion.div>
           ))}
         </div>
@@ -123,7 +123,7 @@ const Skills = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
       >
         <div className="bg-card rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-white mb-6">What I Can Do</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">What I Can Do</h2>
           <ul className="space-y-4">
             <li className="flex items-start">
               <svg className="text-primary mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -153,30 +153,30 @@ const Skills = () => {
         </div>
         
         <div className="bg-card rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-white mb-6">Professional Skills</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Professional Skills</h2>
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <h3 className="text-white font-medium mb-3">Problem Solving</h3>
+              <h3 className="text-foreground font-medium mb-3">Problem Solving</h3>
               <Progress value={95} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
             <div>
-              <h3 className="text-white font-medium mb-3">Communication</h3>
+              <h3 className="text-foreground font-medium mb-3">Communication</h3>
               <Progress value={90} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
             <div>
-              <h3 className="text-white font-medium mb-3">Team Work</h3>
+              <h3 className="text-foreground font-medium mb-3">Team Work</h3>
               <Progress value={85} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
             <div>
-              <h3 className="text-white font-medium mb-3">Leadership</h3>
+              <h3 className="text-foreground font-medium mb-3">Leadership</h3>
               <Progress value={80} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
             <div>
-              <h3 className="text-white font-medium mb-3">Creativity</h3>
+              <h3 className="text-foreground font-medium mb-3">Creativity</h3>
               <Progress value={88} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
             <div>
-              <h3 className="text-white font-medium mb-3">Organization</h3>
+              <h3 className="text-foreground font-medium mb-3">Organization</h3>
               <Progress value={92} className="h-2 w-full bg-muted" style={{ background: "rgb(30, 30, 30)" }} />
             </div>
           </div>
@@ -189,7 +189,7 @@ const Skills = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="bg-card rounded-lg p-8 text-center"
       >
-        <h2 className="text-2xl font-bold text-white mb-4">My Development Approach</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-4">My Development Approach</h2>
         <p className="text-muted-foreground mb-8 max-w-3xl mx-auto">
           I follow a structured approach to web development that ensures high-quality, 
           maintainable code and excellent user experiences. My process includes thorough planning, 
@@ -202,7 +202,7 @@ const Skills = () => {
               <span className="text-primary font-bold text-xl">01</span>
             </div>
             <div className="hidden md:block absolute top-8 left-1/2 w-full h-1 bg-primary/20 -z-0"></div>
-            <h3 className="text-white font-medium mb-2">Planning</h3>
+            <h3 className="text-foreground font-medium mb-2">Planning</h3>
             <p className="text-sm text-muted-foreground">Understanding requirements and architecting solutions</p>
           </div>
           
@@ -211,7 +211,7 @@ const Skills = () => {
               <span className="text-primary font-bold text-xl">02</span>
             </div>
             <div className="hidden md:block absolute top-8 left-1/2 w-full h-1 bg-primary/20 -z-0"></div>
-            <h3 className="text-white font-medium mb-2">Design</h3>
+            <h3 className="text-foreground font-medium mb-2">Design</h3>
             <p className="text-sm text-muted-foreground">Creating intuitive and responsive interfaces</p>
           </div>
           
@@ -220,7 +220,7 @@ const Skills = () => {
               <span className="text-primary font-bold text-xl">03</span>
             </div>
             <div className="hidden md:block absolute top-8 left-1/2 w-full h-1 bg-primary/20 -z-0"></div>
-            <h3 className="text-white font-medium mb-2">Development</h3>
+            <h3 className="text-foreground font-medium mb-2">Development</h3>
             <p className="text-sm text-muted-foreground">Writing clean, efficient, and maintainable code</p>
           </div>
           
@@ -228,7 +228,7 @@ const Skills = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-primary font-bold text-xl">04</span>
             </div>
-            <h3 className="text-white font-medium mb-2">Deployment</h3>
+            <h3 className="text-foreground font-medium mb-2">Deployment</h3>
             <p className="text-sm text-muted-foreground">Testing and delivering high-quality applications</p>
           </div>
         </div>

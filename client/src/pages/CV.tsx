@@ -4,29 +4,35 @@ import { useEffect, useState } from "react";
 
 const CV = () => {
   // Function to handle CV download
-  const handleDownloadCV = () => {
+  const handleDownloadCV = async () => {
     try {
+      // Fetch the PDF file
+      const response = await fetch('/assets/CV.pdf');
+      if (!response.ok) {
+        throw new Error('Failed to fetch PDF file');
+      }
+      
+      // Convert the response to a blob
+      const blob = await response.blob();
+      
+      // Create a blob URL
+      const blobUrl = window.URL.createObjectURL(blob);
+      
       // Create a link element
       const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = 'CV.pdf';
       
-      // Path to the actual CV PDF (stored in the public folder)
-      link.href = '/assets/My CV.pdf';
-      // Set the download attribute with the desired filename
-      link.download = 'Felix-Ashong-CV.pdf';
-      link.target = '_blank'; // Open in new tab as fallback
-      
-      // Simulate a click on the link to trigger the download
+      // Append to body and click
       document.body.appendChild(link);
       link.click();
       
       // Clean up
-      setTimeout(() => {
-        document.body.removeChild(link);
-      }, 100);
-      
-      console.log('Download initiated');
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
     } catch (error) {
       console.error('Download error:', error);
+      alert('An error occurred while trying to download the CV. Please try again later.');
     }
   };
   
@@ -155,7 +161,6 @@ const CV = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
             Download CV
           </button>
-          <p className="text-xs text-muted-foreground italic">This is a placeholder. Your actual CV will be used.</p>
         </div>
       </motion.div>
       

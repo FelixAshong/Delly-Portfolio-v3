@@ -22,7 +22,7 @@ const Home = () => {
           className="md:w-1/2 mb-10 md:mb-0"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Hi, I'm </span>
+            <span className="text-foreground">Hi, I'm </span>
             <span className="text-styled">Felix Ashong</span>
           </h1>
           
@@ -31,7 +31,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-2xl md:text-3xl font-bold text-white mb-4"
+              className="text-2xl md:text-3xl font-bold text-foreground mb-4"
             >
               Full-Stack Web Developer
             </motion.h2>
@@ -51,10 +51,10 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4"
           >
-            <Link href="/projects" className="crystal-btn text-black px-6 py-4 text-base font-medium block">
+            <Link href="/projects" className="crystal-btn text-foreground px-6 py-4 text-base font-medium block">
               View My Work
             </Link>
-            <Link href="/contact" className="crystal-btn border-primary text-primary hover:text-black px-6 py-4 text-base font-medium block">
+            <Link href="/contact" className="crystal-btn text-foreground px-6 py-4 text-base font-medium block">
               Contact Me
             </Link>
           </motion.div>
@@ -96,7 +96,7 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"></path><path d="M7 22h1a4 4 0 0 0 4-4v-1"></path><path d="M7 2h1a4 4 0 0 1 4 4v1"></path></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 dark:text-white">Web Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">Web Development</h3>
             <p className="text-muted-foreground">
               Creating responsive websites that work seamlessly across all devices using modern frameworks and best practices.
             </p>
@@ -106,7 +106,7 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 dark:text-white">Application Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">Application Development</h3>
             <p className="text-muted-foreground">
               Building feature-rich web applications with clean architecture, efficient data management, and intuitive user interfaces.
             </p>
@@ -116,7 +116,7 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 dark:text-white">API Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">API Development</h3>
             <p className="text-muted-foreground">
               Designing and implementing robust APIs that enable seamless integration between systems and services.
             </p>
@@ -134,28 +134,28 @@ const Home = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Technologies I Work With</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">React</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">React</h3>
           </div>
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">Node.js</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">Node.js</h3>
           </div>
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">TypeScript</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">TypeScript</h3>
           </div>
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">Next.js</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">Next.js</h3>
           </div>
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">MongoDB</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">MongoDB</h3>
           </div>
-          <div className="bg-black/30 dark:bg-black/30 bg-white/30 rounded-lg p-6 text-center hover-scale hover-glow">
-            <h3 className="dark:text-white text-foreground font-medium">Tailwind CSS</h3>
+          <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
+            <h3 className="text-foreground font-medium">Tailwind CSS</h3>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/skills" className="crystal-btn border-primary text-primary hover:text-black inline-block px-6 py-3 font-medium">
+          <Link href="/skills" className="crystal-btn text-foreground px-6 py-3 font-medium inline-block">
             View All Skills
           </Link>
         </div>
@@ -214,7 +214,7 @@ const Home = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Let's work together to bring your ideas to life. I'm available for freelance projects and full-time opportunities.
           </p>
-          <Link href="/contact" className="crystal-btn text-black px-8 py-6 text-lg font-medium">
+          <Link href="/contact" className="crystal-btn text-foreground px-8 py-6 text-lg font-medium">
             Get In Touch
           </Link>
         </div>
