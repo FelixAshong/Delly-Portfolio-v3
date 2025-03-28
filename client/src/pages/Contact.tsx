@@ -164,7 +164,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Your Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="bg-background border-border" />
+                        <Input placeholder="Full Name" {...field} className="bg-background border-border" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -178,7 +178,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Your Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@example.com" {...field} className="bg-background border-border" />
+                        <Input placeholder="Valid Email Address" {...field} className="bg-background border-border" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
