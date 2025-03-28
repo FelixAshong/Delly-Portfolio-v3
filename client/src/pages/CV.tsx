@@ -10,8 +10,7 @@ const CV = () => {
       const link = document.createElement('a');
       
       // Path to the actual CV PDF (stored in the public folder)
-      link.href = '/assets/placeholder-CV.pdf';
-      
+      link.href = '/assets/My CV.pdf';
       // Set the download attribute with the desired filename
       link.download = 'Felix-Ashong-CV.pdf';
       link.target = '_blank'; // Open in new tab as fallback
