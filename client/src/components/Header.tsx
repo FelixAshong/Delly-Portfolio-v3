@@ -44,7 +44,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
-            <span className="font-heading font-bold text-xl text-white">PhleoDelly</span>
+            <span className="font-heading font-bold text-xl text-foreground dark:text-white">PhleoDelly</span>
           </Link>
           
           {/* Desktop Navigation */}
