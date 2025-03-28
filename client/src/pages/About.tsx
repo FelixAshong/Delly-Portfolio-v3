@@ -34,11 +34,6 @@ const About = () => {
             alt="Felix Ashong"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="w-24 h-24 flex items-center justify-center">
-              <img src="/assets/logo.png" alt="Logo" className="w-full h-full object-contain" />
-            </span>
-          </div>
         </motion.div>
 
         {/* About Content */}
