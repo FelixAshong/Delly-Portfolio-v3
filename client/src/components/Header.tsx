@@ -76,7 +76,7 @@ const Header = () => {
               href="https://felixashong.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
+              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
             >
               Online CV
             </a>
