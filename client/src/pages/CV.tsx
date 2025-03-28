@@ -7,7 +7,7 @@ const CV = () => {
   const handleDownloadCV = async () => {
     try {
       // Fetch the PDF file
-      const response = await fetch('/assets/CV.pdf');
+      const response = await fetch('/assets/@CV.pdf');
       if (!response.ok) {
         throw new Error('Failed to fetch PDF file');
       }
@@ -21,7 +21,7 @@ const CV = () => {
       // Create a link element
       const link = document.createElement('a');
       link.href = blobUrl;
-      link.download = 'CV.pdf';
+      link.download = '@CV.pdf';
       
       // Append to body and click
       document.body.appendChild(link);
@@ -125,7 +125,7 @@ const CV = () => {
   }, [mounted]);
 
   return (
-    <div className="container mx-auto px-4 py-16 relative">
+    <div className="container mx-auto px-4 py-24 relative">
       {/* Animated background canvas */}
       <canvas id="background-canvas" className="fixed top-0 left-0 w-full h-full -z-10 opacity-20"></canvas>
       
@@ -172,16 +172,13 @@ const CV = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Full-Stack Web Developer</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Front-End Developer</h2>
               
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">PROFESSIONAL SUMMARY</h3>
-                  <p className="text-muted-foreground">
-                    Full-Stack Web Developer with 3+ years of experience in building responsive, user-friendly web
-                    applications in modern JavaScript frameworks and libraries, with a strong focus on React,
-                    Next.js, and Node.js. Passionate about creating clean, efficient code and delivering high-quality
-                    solutions that meet client requirements.
+                  <p className="text-foreground/80">
+                    A results-oriented individual with a passion for continuous learning and innovation, known for leveraging analytical thinking and creativity to solve problems and deliver high-impact solutions in fast-paced environments. Also a motivated student eager to apply classroom knowledge to real-world experiences, with a strong willingness to learn and contribute. Effective communicator with a collaborative mindset, ready to bring fresh perspectives and a strong work ethic to any team.
                   </p>
                 </div>
                 
@@ -191,152 +188,89 @@ const CV = () => {
                   <div className="space-y-6">
                     <div>
                       <div className="flex justify-between mb-1">
-                        <h4 className="text-lg font-semibold text-white">Senior Web Developer</h4>
-                        <span className="text-primary">2022 - Present</span>
+                        <h4 className="text-lg font-semibold text-foreground">Front-End Intern</h4>
+                        <span className="text-primary">08/2023 - 10/2023</span>
                       </div>
-                      <p className="text-muted-foreground mb-2">Tech Solutions Ltd, Accra</p>
-                      <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                        <li>Led the development of enterprise web applications using React and Next.js</li>
-                        <li>Mentored junior developers and implemented best practices for code quality</li>
-                        <li>Optimized application performance and improved user experience</li>
-                        <li>Collaborated with cross-functional teams to deliver projects on time</li>
+                      <p className="text-foreground/80 mb-2">NAVANTRICS LTD | Kasoa</p>
+                      <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                        <li>Actively participated in web application and development projects under senior I.T staff mentorship</li>
+                        <li>Designed and implemented interactive user interfaces for websites and applications</li>
+                        <li>Developed user-facing webpages using HTML, CSS, JavaScript and jQuery</li>
+                        <li>Translated concepts into user flows, wireframes, and prototypes using Figma</li>
+                        <li>Worked with cross-functional teams to achieve goals</li>
+                        <li>Identified needs of customers promptly and efficiently</li>
+                        <li>Engaged with clients, understanding requirements, and collecting feedback</li>
                       </ul>
                     </div>
                     
                     <div>
                       <div className="flex justify-between mb-1">
-                        <h4 className="text-lg font-semibold text-white">Web Developer</h4>
-                        <span className="text-primary">2020 - 2022</span>
+                        <h4 className="text-lg font-semibold text-foreground">Networking Intern</h4>
+                        <span className="text-primary">01/2024 - 03/2024</span>
                       </div>
-                      <p className="text-muted-foreground mb-2">Digital Innovations, Accra</p>
-                      <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                        <li>Developed and maintained client websites using modern web technologies</li>
-                        <li>Implemented responsive designs and ensured cross-browser compatibility</li>
-                        <li>Collaborated with the design team to create seamless user experiences</li>
-                        <li>Participated in code reviews and contributed to team knowledge sharing</li>
+                      <p className="text-foreground/80 mb-2">University Of Ghana Computing Systems | Legon</p>
+                      <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                        <li>Collaborated with IT professionals to identify system needs and implement solutions</li>
+                        <li>Configured and installed network hardware including routers, switches, and firewalls</li>
+                        <li>Replaced faulty network hardware components to improve performance</li>
+                        <li>Corrected network faults and malfunctions to restore connectivity</li>
+                        <li>Completed day-to-day duties accurately and efficiently</li>
+                        <li>Worked with cross-functional teams to achieve goals</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">EDUCATION</h3>
-                  
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <h4 className="text-lg font-semibold text-white">BSc. Computer Science</h4>
-                      <span className="text-primary">2016 - 2020</span>
+                  <div className="space-y-2">
+                    <div>
+                      <h4 className="text-lg font-semibold text-foreground">University of Ghana | Legon</h4>
+                      <p className="text-foreground/80">BSC. Information Technology</p>
                     </div>
-                    <p className="text-muted-foreground">University of Ghana, Legon</p>
                   </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-primary mb-2">CERTIFICATES</h3>
+                  <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                    <li>ALX AI Career Essentials</li>
+                    <li>Prodigee Edtech UI/UX Design Certified</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-primary mb-2">LANGUAGES</h3>
+                  <p className="text-foreground/80">English, Twi</p>
                 </div>
               </div>
             </motion.div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-8"
-          >
-            <div>
-              <div className="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mr-2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                <h3 className="text-lg font-semibold text-white">Email</h3>
-              </div>
-              <p className="text-muted-foreground">phleodelly@gmail.com</p>
-            </div>
-            
-            <div>
-              <div className="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mr-2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <h3 className="text-lg font-semibold text-white">Phone</h3>
-              </div>
-              <p className="text-muted-foreground">+233 123 456 789</p>
-            </div>
-            
-            <div>
-              <div className="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mr-2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <h3 className="text-lg font-semibold text-white">Location</h3>
-              </div>
-              <p className="text-muted-foreground">Accra, Ghana</p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold text-primary mb-4">TECHNICAL SKILLS</h3>
-              
-              <div className="space-y-6">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
+              <div className="space-y-4">
                 <div>
-                  <h4 className="text-white mb-2">Frontend</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">HTML/CSS/JS</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">JavaScript</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">TypeScript</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">React</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Next.js</span>
-                  </div>
+                  <h3 className="text-lg font-semibold text-primary mb-2">Location</h3>
+                  <p className="text-foreground/80">Accra, Ghana</p>
                 </div>
-                
                 <div>
-                  <h4 className="text-white mb-2">Backend</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Node.js</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Express</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">MongoDB</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">MySQL</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">REST APIs</span>
-                  </div>
+                  <h3 className="text-lg font-semibold text-primary mb-2">Phone</h3>
+                  <p className="text-foreground/80">0545551579</p>
                 </div>
-                
                 <div>
-                  <h4 className="text-white mb-2">Tools & Others</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Git</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">GitHub</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">VS Code</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Figma</span>
-                    <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">AWS</span>
-                  </div>
+                  <h3 className="text-lg font-semibold text-primary mb-2">Email</h3>
+                  <p className="text-foreground/80">felixashong4@gmail.com</p>
                 </div>
               </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold text-primary mb-4">SOFT SKILLS</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Problem Solving</span>
-                <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Communication</span>
-                <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Teamwork</span>
-                <span className="px-2 py-1 bg-primary/20 text-primary rounded text-sm">Time Management</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-12"
-        >
-          <h3 className="text-xl font-semibold text-primary mb-4">CONNECT WITH ME</h3>
-          <div className="flex space-x-4">
-            <Button variant="outline" size="icon" className="rounded-full border-primary/50 hover:bg-primary/20 hover:text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/50 hover:bg-primary/20 hover:text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/50 hover:bg-primary/20 hover:text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/50 hover:bg-primary/20 hover:text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-            </Button>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

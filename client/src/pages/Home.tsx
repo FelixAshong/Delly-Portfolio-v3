@@ -68,7 +68,7 @@ const Home = () => {
         >
           <div className="w-72 h-72 md:w-96 md:h-96">
             <GlowingProfileImage 
-              imageUrl="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1000&auto=format&fit=crop"
+              imageUrl="https://images.unsplash.com/photo-1566753323558-f4e0952af115p?q=80&w=1000&auto=format&fit=cro"
               altText="Felix Ashong"
               glowColor="#ff6b00"
               glowIntensity={0.8}

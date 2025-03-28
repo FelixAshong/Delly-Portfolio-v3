@@ -18,32 +18,32 @@ export const TOOLS = [
   { 
     name: "Git & GitHub", 
     percentage: 92,
-    icon: "🔄"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
   },
   { 
-    name: "Docker", 
+    name: "React", 
     percentage: 85,
-    icon: "🐳"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   { 
-    name: "AWS", 
+    name: "Photoshop", 
     percentage: 80,
-    icon: "☁️"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
   },
   { 
     name: "Figma", 
     percentage: 88,
-    icon: "🎨"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
   },
   { 
-    name: "Jest", 
+    name: "Node.js", 
     percentage: 78,
-    icon: "🧪"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   },
   { 
     name: "VS Code", 
     percentage: 90,
-    icon: "📝"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
   }
 ];
 

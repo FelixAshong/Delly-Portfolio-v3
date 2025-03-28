@@ -32,7 +32,7 @@ const SkillBar = ({ name, percentage, color, delay }: SkillBarProps) => {
 
 const Skills = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-24 relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -107,8 +107,12 @@ const Skills = () => {
               transition={{ duration: 0.3, delay: 0.1 * index }}
               className="bg-card hover:bg-card/80 rounded-lg p-6 text-center transition-colors flex flex-col items-center justify-center h-32"
             >
-              <div className="text-primary text-3xl mb-3">
-                {tool.icon}
+              <div className="mb-3">
+                <img 
+                  src={tool.icon} 
+                  alt={tool.name}
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h3 className="text-foreground font-medium">{tool.name}</h3>
             </motion.div>
