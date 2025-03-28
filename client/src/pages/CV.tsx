@@ -6,7 +6,7 @@ const CV = () => {
   const handleDownloadCV = async () => {
     try {
       // Fetch the PDF file
-      const response = await fetch('/client/public/assets/CV.pdf');
+      const response = await fetch('/assets/CV.pdf');
       if (!response.ok) {
         throw new Error('Failed to fetch PDF file');
       }
@@ -155,7 +155,7 @@ const CV = () => {
         <div className="flex flex-col items-end space-y-1">
           <button 
             onClick={handleDownloadCV}
-            className="crystal-btn text-black font-medium"
+            className="crystal-btn text-white font-medium"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
             Download CV
