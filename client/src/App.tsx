@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow pt-[72px] md:pt-[88px]">
         <Router />
       </main>
       <Footer />

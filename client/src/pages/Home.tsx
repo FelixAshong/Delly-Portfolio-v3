@@ -11,14 +11,14 @@ const Home = () => {
       <div className="bg-gradient-2 absolute w-[400px] h-[400px] -bottom-20 -right-20 opacity-20 z-0"></div>
       
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between py-20 md:py-32 relative z-10">
+      <section className="flex flex-col md:flex-row items-center justify-between py-16 md:py-32 relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="md:w-1/2 mb-10 md:mb-0"
+          className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6">
             <span className="text-foreground">Hi, I'm </span>
             <span className="text-styled">Felix Ashong</span>
           </h1>
@@ -28,7 +28,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-2xl md:text-3xl font-bold text-foreground mb-4"
+              className="text-xl md:text-3xl font-bold text-foreground mb-3 md:mb-4"
             >
               Full-Stack Web Developer
             </motion.h2>
@@ -36,7 +36,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-muted-foreground text-base md:text-lg max-w-lg"
+              className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto md:mx-0"
             >
               I specialize in creating modern, responsive web applications that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment.
             </motion.p>
@@ -46,12 +46,12 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start"
           >
-            <Link href="/projects" className="crystal-btn text-foreground px-6 py-4 text-base font-medium block">
+            <Link href="/projects" className="crystal-btn text-foreground px-6 py-3 md:py-4 text-base font-medium text-center">
               View My Work
             </Link>
-            <Link href="/contact" className="crystal-btn text-foreground px-6 py-4 text-base font-medium block">
+            <Link href="/contact" className="crystal-btn text-foreground px-6 py-3 md:py-4 text-base font-medium text-center">
               Contact Me
             </Link>
           </motion.div>
@@ -61,9 +61,9 @@ const Home = () => {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center mt-8 md:mt-0"
         >
-          <div className="w-72 h-72 md:w-96 md:h-96">
+          <div className="w-64 h-64 md:w-96 md:h-96">
             <GlowingProfileImage 
               imageUrl="/assets/profile/3.jpg"
               altText="Felix Ashong"
@@ -80,15 +80,15 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="py-16 text-center"
+        className="py-12 md:py-16 text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">What I Do</h2>
-        <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-12">
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">What I Do</h2>
+        <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-8 md:mb-12 px-4">
           I build beautiful, functional, and user-friendly websites and web applications using modern technologies.
           My goal is to create digital solutions that help businesses grow and provide users with exceptional experiences.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 px-4">
           <div className="bg-card rounded-lg p-8 hover-float hover-glow">
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"></path><path d="M7 22h1a4 4 0 0 0 4-4v-1"></path><path d="M7 2h1a4 4 0 0 1 4 4v1"></path></svg>
@@ -126,11 +126,11 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="py-16 bg-card rounded-lg p-8"
+        className="py-12 md:py-16 bg-card rounded-lg p-6 md:p-8"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Technologies I Work With</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-primary mb-8 md:mb-12 text-center">Technologies I Work With</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
           <div className="bg-card/50 dark:bg-black/30 rounded-lg p-6 text-center hover-scale hover-glow">
             <h3 className="text-foreground font-medium">React</h3>
           </div>
@@ -163,7 +163,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="py-16 grid grid-cols-2 md:grid-cols-4 gap-6 relative"
+        className="py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 relative"
       >
         {/* Background gradient for stats section */}
         <div className="bg-gradient-3 absolute w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 z-0"></div>

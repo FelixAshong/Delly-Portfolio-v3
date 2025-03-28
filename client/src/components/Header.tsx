@@ -94,44 +94,56 @@ const Header = () => {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
-            className="md:hidden bg-card absolute top-full left-0 w-full border-b border-border"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.name}
-                  href={link.href}
-                  className={`block py-2 px-4 ${isActive(link.href) ? 'bg-primary/10 text-primary' : 'text-muted-foreground'} hover:bg-muted rounded-md transition-colors`}
-                  onClick={closeMenu}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Link 
-                href="/contact"
-                className="block crystal-btn w-full py-2 px-4 text-white rounded-md font-medium mt-2 text-center"
-                style={{ background: "#2563eb" }}
-                onClick={closeMenu}
-              >
-                Hire Me
-              </Link>
-              <Link 
-                href="/cv"
-                className="block crystal-btn w-full py-2 px-4 text-black rounded-md font-medium mt-2 text-center"
-                onClick={closeMenu}
-              >
-                Online CV
-              </Link>
-              <div className="py-2 px-4 mt-2 flex justify-start">
-                <ThemeToggle />
+          <>
+            <motion.div 
+              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={closeMenu}
+            />
+            <motion.div 
+              className="md:hidden fixed top-[72px] left-0 w-full bg-card border-b border-border z-50"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.name}
+                    href={link.href}
+                    className={`block py-3 px-4 ${isActive(link.href) ? 'bg-primary/10 text-primary' : 'text-muted-foreground'} hover:bg-muted rounded-md transition-colors text-base`}
+                    onClick={closeMenu}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <div className="pt-4 space-y-3">
+                  <Link 
+                    href="/contact"
+                    className="block crystal-btn w-full py-3 px-4 text-white rounded-md font-medium text-center"
+                    style={{ background: "#2563eb" }}
+                    onClick={closeMenu}
+                  >
+                    Hire Me
+                  </Link>
+                  <Link 
+                    href="/cv"
+                    className="block crystal-btn w-full py-3 px-4 text-black rounded-md font-medium text-center"
+                    onClick={closeMenu}
+                  >
+                    Online CV
+                  </Link>
+                </div>
+                <div className="py-4 px-4 flex justify-start border-t border-border mt-4">
+                  <ThemeToggle />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
