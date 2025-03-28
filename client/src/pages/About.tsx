@@ -27,7 +27,7 @@ const About = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative aspect-square rounded-lg overflow-hidden max-w-md mx-auto md:max-w-none"
+          className="relative aspect-square rounded-lg overflow-hidden border-4 border-primary mb-4 md:mb-0"
         >
           <img
             src="/assets/profile/3.jpg"
