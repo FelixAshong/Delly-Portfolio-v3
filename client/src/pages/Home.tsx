@@ -16,7 +16,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left"
+          className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left order-2 md:order-1"
         >
           <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6">
             <span className="text-foreground">Hi, I'm </span>
@@ -61,9 +61,9 @@ const Home = () => {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="md:w-1/2 flex justify-center mt-8 md:mt-0"
+          className="md:w-1/2 flex justify-center items-center order-1 md:order-2 mb-8 md:mb-0"
         >
-          <div className="w-64 h-64 md:w-96 md:h-96">
+          <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96">
             <GlowingProfileImage 
               imageUrl="/assets/profile/3.jpg"
               altText="Felix Ashong"

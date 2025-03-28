@@ -44,7 +44,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
-            <span className="font-heading font-bold text-xl text-foreground dark:text-white">PhleoDelly</span>
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-primary">
+              <img 
+                src="/assets/profile/2.jpg" 
+                alt="PhleoDelly Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <span className="font-heading font-bold text-xl text-foreground dark:text-white hidden md:inline">PhleoDelly</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -65,12 +72,14 @@ const Header = () => {
             >
               Hire Me
             </Link>
-            <Link 
-              href="/cv"
+            <a 
+              href="https://felixashong.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="crystal-btn text-black px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
             >
               Online CV
-            </Link>
+            </a>
             <div className="ml-2">
               <ThemeToggle />
             </div>
@@ -130,13 +139,15 @@ const Header = () => {
                   >
                     Hire Me
                   </Link>
-                  <Link 
-                    href="/cv"
+                  <a 
+                    href="https://felixashong.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block crystal-btn w-full py-3 px-4 text-black rounded-md font-medium text-center"
                     onClick={closeMenu}
                   >
                     Online CV
-                  </Link>
+                  </a>
                 </div>
                 <div className="py-4 px-4 flex justify-start border-t border-border mt-4">
                   <ThemeToggle />

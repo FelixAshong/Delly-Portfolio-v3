@@ -9,7 +9,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center mb-4">
-              <span className="font-heading font-bold text-2xl text-white">PhleoDelly</span>
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-primary">
+                <img 
+                  src="/assets/profile/2.jpg" 
+                  alt="PhleoDelly Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="font-heading font-bold text-2xl text-foreground dark:text-white hidden md:inline ml-2">PhleoDelly</span>
             </div>
             <p className="text-muted-foreground">
               Creating modern web solutions that bring ideas to life.
@@ -31,7 +38,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-foreground dark:text-white mb-4">Quick Links</h3>
             <nav className="flex flex-col space-y-3">
               <Link href="/">
                 <a className="text-muted-foreground hover:text-primary transition-colors">Home</a>
@@ -52,7 +59,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-foreground dark:text-white mb-4">Services</h3>
             <nav className="flex flex-col space-y-3">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Web Development</a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">App Development</a>
@@ -63,7 +70,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold text-foreground dark:text-white mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
