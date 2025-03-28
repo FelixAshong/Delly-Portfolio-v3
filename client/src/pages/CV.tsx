@@ -144,7 +144,7 @@ const CV = () => {
             className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary mb-4 md:mb-0"
           >
             <img 
-              src="/assets/1.png" 
+              src="/assets/profile/1.png" 
               alt="Felix Ashong" 
               className="w-full h-full object-cover"
             />
