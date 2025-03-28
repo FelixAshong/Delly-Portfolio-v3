@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FRONTEND_SKILLS, BACKEND_SKILLS, TOOLS } from "@/lib/constants";
 import { fadeIn } from "@/lib/animations";

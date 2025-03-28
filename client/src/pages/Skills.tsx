@@ -5,11 +5,10 @@ import { FRONTEND_SKILLS, BACKEND_SKILLS, TOOLS } from "@/lib/constants";
 interface SkillBarProps {
   name: string;
   percentage: number;
-  color: string;
   delay: number;
 }
 
-const SkillBar = ({ name, percentage, color, delay }: SkillBarProps) => {
+const SkillBar = ({ name, percentage, delay }: SkillBarProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -62,7 +61,6 @@ const Skills = () => {
               key={skill.name}
               name={skill.name}
               percentage={skill.percentage}
-              color="primary"
               delay={index + 2}
             />
           ))}
@@ -83,7 +81,6 @@ const Skills = () => {
               key={skill.name}
               name={skill.name}
               percentage={skill.percentage}
-              color="blue-600"
               delay={index + 2}
             />
           ))}

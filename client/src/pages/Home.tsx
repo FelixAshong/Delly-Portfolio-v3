@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { useEffect, useState, useRef } from "react";
 import CountUp from "@/components/CountUp";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import GlowingProfileImage from "@/components/GlowingProfileImage";
 
 const Home = () => {
@@ -68,15 +65,11 @@ const Home = () => {
         >
           <div className="w-72 h-72 md:w-96 md:h-96">
             <GlowingProfileImage 
-              imageUrl="/assets/profile/1.png"
+              imageUrl="/assets/profile/3.jpg"
               altText="Felix Ashong"
               glowColor="#ff6b00"
               glowIntensity={0.8}
               className="w-full h-full"
-              onError={(e) => {
-                console.error('Failed to load profile image');
-                e.currentTarget.src = '/assets/profile/fallback.png';
-              }}
             />
           </div>
         </motion.div>

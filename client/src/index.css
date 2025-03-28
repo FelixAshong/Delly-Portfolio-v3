@@ -99,7 +99,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold;
+    @apply font-sans font-bold;
   }
 }
 
@@ -252,7 +252,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     font-weight: 600;
   }
   
@@ -269,7 +268,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
   }
   
   .dark .text-gradient {
@@ -281,7 +279,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
   }
   
   /* Background gradients */
@@ -399,7 +396,10 @@
 .glow-image::after {
   content: '';
   position: absolute;
-  inset: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
   border-radius: 50%;
   border: 4px solid transparent;
   background: linear-gradient(45deg, transparent, var(--glow-color, #ff6b00), transparent) border-box;
@@ -407,6 +407,10 @@
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: rotate 4s linear infinite;
 }

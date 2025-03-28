@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const CV = () => {
@@ -7,7 +6,7 @@ const CV = () => {
   const handleDownloadCV = async () => {
     try {
       // Fetch the PDF file
-      const response = await fetch('/assets/@CV.pdf');
+      const response = await fetch('/client/public/assets/CV.pdf');
       if (!response.ok) {
         throw new Error('Failed to fetch PDF file');
       }
@@ -21,7 +20,7 @@ const CV = () => {
       // Create a link element
       const link = document.createElement('a');
       link.href = blobUrl;
-      link.download = '@CV.pdf';
+      link.download = '/client/public/assets/CV.pdf';
       
       // Append to body and click
       document.body.appendChild(link);
@@ -144,7 +143,7 @@ const CV = () => {
             className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary mb-4 md:mb-0"
           >
             <img 
-              src="/assets/profile/1.png" 
+              src="/assets/profile/3.jpg" 
               alt="Felix Ashong" 
               className="w-full h-full object-cover"
             />

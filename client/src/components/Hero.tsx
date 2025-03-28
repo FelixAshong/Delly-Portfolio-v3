@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn, slideInLeft, slideInRight } from "@/lib/animations";
+import { slideInLeft, slideInRight } from "@/lib/animations";
 
 const Hero = () => {
   return (
