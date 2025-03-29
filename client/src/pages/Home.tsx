@@ -113,10 +113,11 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">API Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">Web Design & UI/UX</h3>
             <p className="text-muted-foreground">
-              Designing and implementing robust APIs that enable seamless integration between systems and services.
-            </p>
+           Crafting visually appealing and user-friendly interfaces to enhance user experience and engagement.
+          </p>
+
           </div>
         </div>
       </motion.section>
