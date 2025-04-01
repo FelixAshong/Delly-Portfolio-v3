@@ -1,15 +1,31 @@
-import express from "express";
+// Load environment variables first
+import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import { registerRoutes } from "./routes";
-import { setupVite, serveStatic } from "./vite";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Load environment variables from .env file
+dotenv.config();
+
+// Log environment configuration
+console.log('Environment Configuration:', {
+  NODE_ENV: process.env.NODE_ENV,
+  EMAIL_USER: process.env.EMAIL_USER,
+  HAS_EMAIL_PASSWORD: !!process.env.EMAIL_PASSWORD,
+  PORT: process.env.PORT || 3000
+});
+
+// Import other dependencies after environment is loaded
+import express from "express";
+import { registerRoutes } from "./routes";
+import { setupVite, serveStatic } from "./vite";
+import cors from "cors";
+
 const app = express();
 
-// Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -84,10 +100,10 @@ if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
   (async () => {
     try {
       const app = await initializeServer();
-      const port = process.env.PORT ? parseInt(process.env.PORT) : 5000;
+      const port = process.env.PORT || 3000;
       
       app.listen(port, () => {
-        console.log(`Server running at http://localhost:${port}`);
+        console.log(`Server running on port ${port}`);
       });
     } catch (error) {
       console.error("Failed to start server:", error);

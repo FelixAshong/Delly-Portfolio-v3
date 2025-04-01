@@ -47,7 +47,18 @@ const Contact = () => {
         toast({
           title: "Message sent successfully!",
           description: "I'll get back to you as soon as possible.",
-          variant: "default"
+          variant: "default",
+          className: "animate-in slide-in-from-top-4 duration-500",
+          style: {
+            background: "hsl(var(--ghana-green))",
+            color: "white",
+            border: "none",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            padding: "1rem",
+            borderRadius: "0.5rem",
+            fontSize: "1rem",
+            fontWeight: "500"
+          }
         });
         form.reset();
       } else {
@@ -58,7 +69,18 @@ const Contact = () => {
       toast({
         title: "Error sending message",
         description: error.message || "Something went wrong. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
+        className: "animate-in slide-in-from-top-4 duration-500",
+        style: {
+          background: "hsl(var(--ghana-red))",
+          color: "white",
+          border: "none",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+          padding: "1rem",
+          borderRadius: "0.5rem",
+          fontSize: "1rem",
+          fontWeight: "500"
+        }
       });
     } finally {
       setIsSubmitting(false);
@@ -95,7 +117,11 @@ const Contact = () => {
               <div>
                 <h3 className="text-foreground font-bold mb-1">Email</h3>
                 <p className="text-foreground/80">phleodelly@gmail.com</p>
-                <Button variant="link" className="text-primary p-0 h-auto mt-2">
+                <Button 
+                  variant="link" 
+                  className="text-primary p-0 h-auto mt-2"
+                  onClick={() => window.location.href = "mailto:phleodelly@gmail.com"}
+                >
                   Send an email
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
@@ -116,7 +142,11 @@ const Contact = () => {
               <div>
                 <h3 className="text-foreground font-bold mb-1">Phone</h3>
                 <p className="text-foreground/80">+233 123 456 789</p>
-                <Button variant="link" className="text-primary p-0 h-auto mt-2">
+                <Button 
+                  variant="link" 
+                  className="text-primary p-0 h-auto mt-2"
+                  onClick={() => window.location.href = "tel:+233123456789"}
+                >
                   Make a call
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
@@ -136,8 +166,12 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Location</h3>
-                <p className="text-foreground/80">Accra, Ghana</p>
-                <Button variant="link" className="text-primary p-0 h-auto mt-2">
+                <p className="text-foreground/80">University of Ghana, Legon</p>
+                <Button 
+                  variant="link" 
+                  className="text-primary p-0 h-auto mt-2"
+                  onClick={() => window.open("https://www.google.com/maps?q=University+of+Ghana+Legon", "_blank")}
+                >
                   View on map
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
