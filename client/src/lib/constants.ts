@@ -148,22 +148,22 @@ export const PROJECTS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Working with Phleodelly was a game-changer for our business. He delivered our e-commerce platform ahead of schedule and with more features than we initially requested. His technical expertise and communication skills made the development process smooth and stress-free.",
-    name: "Sarah Johnson",
+    quote: "Working with Mr.Felix Ashong was a game-changer for our business. He delivered our e-commerce platform ahead of schedule and with more features than we initially requested. His technical expertise and communication skills made the development process smooth and stress-free.",
+    name: "Jacob Antwi",
     title: "CEO, StyleHub",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&h=120&q=80"
   },
   {
-    quote: "Phleodelly transformed our outdated site into a modern, responsive platform that's increased our conversion rate by 40%. His attention to detail and commitment to quality are exceptional. We've already hired him for two additional projects.",
-    name: "Michael Roberts",
-    title: "Marketing Director, TechFlow",
+    quote: "Mr. Felix transformed our outdated site into a modern, responsive platform that's increased our conversion rate by 40%. His attention to detail and commitment to quality are exceptional. We've already hired him for two additional projects.",
+    name: "Addae Jeffery",
+    title: "Client",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&h=120&q=80"
   }
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "GitHub", icon: "ri-github-fill", url: "#", hoverColor: "red" },
-  { name: "LinkedIn", icon: "ri-linkedin-fill", url: "#", hoverColor: "yellow" },
-  { name: "Twitter", icon: "ri-twitter-fill", url: "#", hoverColor: "green" },
-  { name: "Dribbble", icon: "ri-dribbble-fill", url: "#", hoverColor: "red" }
+  { name: "GitHub", icon: "ri-github-fill", url: "https://github.com/FelixAshong", hoverColor: "red" },
+  { name: "LinkedIn", icon: "ri-linkedin-fill", url: "https://www.linkedin.com/in/felix-ashong/", hoverColor: "yellow" },
+  { name: "Twitter", icon: "ri-twitter-fill", url: "https://x.com/phleodelly", hoverColor: "green" },
+  { name: "Instagram", icon: "ri-instagram-fill", url: "https://www.instagram.com/phleodelly/", hoverColor: "red" }
 ];

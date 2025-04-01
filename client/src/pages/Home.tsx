@@ -213,21 +213,21 @@ const Home = () => {
         
         <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
-            <CountUp end={3} suffix="+" />
+            <CountUp end={2} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Years Experience</p>
         </div>
         
         <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
-            <CountUp end={20} suffix="+" />
+            <CountUp end={5} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Projects Completed</p>
         </div>
         
         <div className="bg-card p-6 rounded-lg text-center relative z-10 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
           <h3 className="text-4xl font-bold text-primary mb-2">
-            <CountUp end={15} suffix="+" />
+            <CountUp end={3} suffix="+" />
           </h3>
           <p className="text-muted-foreground">Happy Clients</p>
         </div>
