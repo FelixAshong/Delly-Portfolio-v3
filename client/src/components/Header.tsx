@@ -55,19 +55,25 @@ const Header = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name}
-                href={link.href}
-                className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm whitespace-nowrap`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-4 lg:space-x-6">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name}
+                  href={link.href}
+                  className={`${isActive(link.href) ? 'text-primary font-medium' : 'text-muted-foreground'} hover:text-white transition-colors text-sm whitespace-nowrap`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </nav>
+
+          {/* Right side buttons */}
+          <div className="flex items-center space-x-4">
             <Link 
               href="/contact"
-              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium ml-2 whitespace-nowrap"
+              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
               style={{ background: "#2563eb" }}
             >
               Hire Me
@@ -83,7 +89,7 @@ const Header = () => {
             <div className="ml-2">
               <ThemeToggle />
             </div>
-          </nav>
+          </div>
           
           {/* Mobile menu button */}
           <button 
