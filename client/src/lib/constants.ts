@@ -131,3 +131,36 @@ export const SOCIAL_LINKS = [
   { name: "Twitter", icon: "ri-twitter-fill", url: "https://x.com/phleodelly", hoverColor: "green" },
   { name: "Instagram", icon: "ri-instagram-fill", url: "https://www.instagram.com/phleodelly/", hoverColor: "red" }
 ];
+
+export const SERVICES = [
+  {
+    title: "Web Development",
+    description: "Building modern, responsive, and user-friendly web applications using the latest technologies.",
+    features: [
+      "React & Next.js Development",
+      "TypeScript Implementation",
+      "Responsive Design",
+      "Performance Optimization"
+    ]
+  },
+  {
+    title: "UI/UX Design",
+    description: "Creating beautiful and intuitive user interfaces with a focus on user experience.",
+    features: [
+      "Wireframing & Prototyping",
+      "User Interface Design",
+      "User Experience Design",
+      "Design Systems"
+    ]
+  },
+  {
+    title: "Mobile Development",
+    description: "Developing cross-platform mobile applications that work seamlessly on all devices.",
+    features: [
+      "React Native Development",
+      "Cross-platform Solutions",
+      "Native Performance",
+      "App Store Deployment"
+    ]
+  }
+];

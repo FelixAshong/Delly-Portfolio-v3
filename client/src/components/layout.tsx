@@ -1,3 +1,13 @@
+import React from 'react';
+import { Link } from 'wouter';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import ThemeToggle from './ThemeToggle';
+import CursorGradient from './CursorGradient';
+import { Oswald, Work_Sans } from 'next/font/google';
+
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
+const workSans = Work_Sans({ subsets: ['latin'], variable: '--font-work-sans' });
+
 export default function RootLayout({
   children,
 }: Readonly<{

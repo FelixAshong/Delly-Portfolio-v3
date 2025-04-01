@@ -1,9 +1,8 @@
+import React from 'react';
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 relative">
       {/* Background gradient effects */}

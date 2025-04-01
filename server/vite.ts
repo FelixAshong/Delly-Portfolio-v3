@@ -28,7 +28,7 @@ export async function setupVite(app: express.Application, server: any) {
   };
 
   const vite = await createViteServer({
-    configFile: false,
+    configFile: path.resolve(__dirname, "..", "client", "vite.config.ts"),
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
@@ -61,7 +61,7 @@ export async function setupVite(app: express.Application, server: any) {
 }
 
 export function serveStatic(app: express.Application) {
-  const distPath = path.resolve(__dirname, "..", "dist", "public");
+  const distPath = path.resolve(__dirname, "..", "client", "dist");
   
   if (!fs.existsSync(distPath)) {
     throw new Error(

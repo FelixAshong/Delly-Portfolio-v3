@@ -103,7 +103,15 @@ if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
       const port = process.env.PORT || 3000;
       
       app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
+        console.log('\n🚀 Server is running!');
+        console.log(`📝 Environment: ${process.env.NODE_ENV}`);
+        console.log(`📧 Email configured: ${!!process.env.EMAIL_USER && !!process.env.EMAIL_PASSWORD}`);
+        console.log(`🌐 Server URL: http://localhost:${port}`);
+        console.log(`🎨 Frontend URL: http://localhost:${port}`);
+        console.log('\n📋 Available endpoints:');
+        console.log(`   - GET  /api/test-email`);
+        console.log(`   - POST /api/contact`);
+        console.log('\n💡 Tip: Use Ctrl+C to stop the server\n');
       });
     } catch (error) {
       console.error("Failed to start server:", error);
