@@ -1,5 +1,5 @@
 export const FRONTEND_SKILLS = [
-  { name: "HTML5 & CSS3", percentage: 95 },
+  { name: "HTML5 & CSS3", percentage: 98 },
   { name: "JavaScript (ES6+)", percentage: 90 },
   { name: "React.js", percentage: 92 },
   { name: "Tailwind CSS", percentage: 88 },
@@ -8,26 +8,26 @@ export const FRONTEND_SKILLS = [
 
 export const BACKEND_SKILLS = [
   { name: "Node.js", percentage: 90 },
-  { name: "Express.js", percentage: 88 },
-  { name: "MongoDB", percentage: 85 },
-  { name: "SQL Databases", percentage: 80 },
-  { name: "GraphQL", percentage: 75 }
+  { name: "Express.js", percentage: 70 },
+  { name: "MongoDB", percentage: 50 },
+  { name: "SQL Databases", percentage: 50 },
+  { name: "GraphQL", percentage: 45 }
 ];
 
 export const TOOLS = [
   { 
     name: "Git & GitHub", 
-    percentage: 92,
+    percentage: 98,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
   },
   { 
     name: "React", 
-    percentage: 85,
+    percentage: 95,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   { 
     name: "Photoshop", 
-    percentage: 80,
+    percentage: 60,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
   },
   { 
@@ -37,7 +37,7 @@ export const TOOLS = [
   },
   { 
     name: "Node.js", 
-    percentage: 78,
+    percentage: 92,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   },
   { 
@@ -118,31 +118,64 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    title: "ShopSmart Dashboard",
-    description: "A comprehensive admin dashboard for an e-commerce platform with inventory management, analytics, and order processing.",
-    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    category: "E-commerce",
+    title: "cemar-counselling",
+    description: "A comprehensive counselling platform with real-time chat, appointment scheduling, and resource management.",
+    image: "/projects/counseling-app.png",
+    category: "Web Development",
     categoryColor: "red",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-    link: "#"
+    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+    link: "https://cemar-counselling.vercel.app",
+    github: "https://github.com/FelixAshong/cemar-counselling"
   },
   {
-    title: "CashFlow Mobile App",
-    description: "A personal finance tracking application with budgeting tools, expense categorization, and financial insights.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    category: "Finance",
+    title: "UG visitor-check-in",
+    description: "A collection of utility applications including calculator, todo list, and weather app.",
+    image: "/projects/visitor-check-in.png",
+    category: "Web Development",
+    categoryColor: "blue",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    link: "https://v0-animated-react-ui.vercel.app/",
+    github: "https://github.com/FelixAshong/visitor-check-in"
+  },
+  {
+    title: "kthtelemedicine (Korle-Bu)",
+    description: "This project aims to develop a web-based telemedicine platform for the Korle-Bu Teaching Hospital (KBTH) to enable remote patient monitoring, virtual consultations, and efficient healthcare delivery.",
+    image: "/projects/hospital-management.jpg",
+    category: "Web Development",
     categoryColor: "green",
-    technologies: ["React Native", "Firebase", "Redux", "D3.js"],
-    link: "#"
+    technologies: ["React", "Node.js", "PostgreSQL"],
+    link: "https://v0-telemedicine-platform.vercel.app/",
+    github: "https://github.com/FelixAshong/kthtelemedicine"
   },
   {
-    title: "LearnHub Platform",
-    description: "An interactive e-learning platform with course management, video streaming, and student progress tracking.",
-    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    category: "Education",
+    title: "E-Commerce Platform",
+    description: "A full-featured e-commerce platform with shopping cart and payment integration.",
+    image: "/projects/ecommerce.jpg",
+    category: "Web Development",
+    categoryColor: "purple",
+    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    link: "https://ecommerce-platform.vercel.app",
+    github: "https://github.com/FelixAshong/ecommerce-platform"
+  },
+  {
+    title: "Portfolio Website",
+    description: "A modern portfolio website showcasing projects and skills.",
+    image: "/projects/portfolio.jpg",
+    category: "UI/UX Design",
     categoryColor: "yellow",
-    technologies: ["Next.js", "Express", "PostgreSQL", "WebRTC"],
-    link: "#"
+    technologies: ["React", "Framer Motion", "Tailwind CSS"],
+    link: "https://portfolio.vercel.app",
+    github: "https://github.com/FelixAshong/portfolio"
+  },
+  {
+    title: "Weather App",
+    description: "A weather application with real-time data and location-based forecasts.",
+    image: "/projects/weather-app.jpg",
+    category: "Mobile Apps",
+    categoryColor: "orange",
+    technologies: ["React Native", "OpenWeather API"],
+    link: "https://weather-app.vercel.app",
+    github: "https://github.com/FelixAshong/weather-app"
   }
 ];
 
