@@ -47,75 +47,6 @@ export const TOOLS = [
   }
 ];
 
-export const SERVICES = [
-  {
-    icon: "ri-layout-4-line",
-    color: "yellow",
-    title: "Responsive Web Design",
-    description: "Creating beautiful, functional websites that work flawlessly across all devices and screen sizes.",
-    features: [
-      "Mobile-first approach",
-      "Cross-browser compatibility",
-      "Optimized performance"
-    ]
-  },
-  {
-    icon: "ri-code-s-slash-line",
-    color: "red",
-    title: "Full-Stack Development",
-    description: "End-to-end web application development with seamless integration between front-end and back-end.",
-    features: [
-      "MERN stack expertise",
-      "RESTful API development",
-      "Database design and management"
-    ]
-  },
-  {
-    icon: "ri-shopping-cart-line",
-    color: "green",
-    title: "E-Commerce Solutions",
-    description: "Custom online stores and shopping experiences that drive sales and delight customers.",
-    features: [
-      "Payment gateway integration",
-      "Inventory management",
-      "Mobile shopping experiences"
-    ]
-  },
-  {
-    icon: "ri-shield-check-line",
-    color: "yellow",
-    title: "Web Application Security",
-    description: "Implementing robust security measures to protect your web applications and user data.",
-    features: [
-      "Authentication systems",
-      "Data encryption",
-      "Security audits"
-    ]
-  },
-  {
-    icon: "ri-speed-line",
-    color: "red",
-    title: "Performance Optimization",
-    description: "Enhancing speed, efficiency, and user experience through comprehensive optimization.",
-    features: [
-      "Page speed improvements",
-      "Asset optimization",
-      "Code refactoring"
-    ]
-  },
-  {
-    icon: "ri-cloud-line",
-    color: "green",
-    title: "Cloud Deployment & DevOps",
-    description: "Seamless deployment and management of web applications on cloud platforms.",
-    features: [
-      "AWS, Azure, GCP setup",
-      "CI/CD pipeline implementation",
-      "Monitoring and maintenance"
-    ]
-  }
-];
-
 export const PROJECTS = [
   {
     title: "cemar-counselling",
@@ -168,14 +99,14 @@ export const PROJECTS = [
     github: "https://github.com/FelixAshong/movie-house-booking"
   },
   {
-    title: "Weather App",
-    description: "A weather application with real-time data and location-based forecasts.",
-    image: "/projects/weather-app.jpg",
+    title: "Foodie - Food Delivery App",
+    description: "A food delivery app with real-time order tracking and payment integration.",
+    image: "/projects/mobile.jpg",
     category: "Mobile Apps",
     categoryColor: "orange",
-    technologies: ["React Native", "OpenWeather API"],
-    link: "https://weather-app.vercel.app",
-    github: "https://github.com/FelixAshong/weather-app"
+    technologies: ["React Native", "Expo"],
+    link: "https://github.com/FelixAshong/foodie",
+    github: "https://github.com/FelixAshong/foodie"
   }
 ];
 
