@@ -148,24 +148,24 @@ export const PROJECTS = [
     github: "https://github.com/FelixAshong/kthtelemedicine"
   },
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with shopping cart and payment integration.",
-    image: "/projects/ecommerce.jpg",
+    title: "Bentilzone Online Restaurant App",
+    description: "A full-featured Bentilzone Online Restaurant App platform with shopping cart and payment integration.",
+    image: "/projects/Restaurant.png",
     category: "Web Development",
     categoryColor: "purple",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    link: "https://ecommerce-platform.vercel.app",
-    github: "https://github.com/FelixAshong/ecommerce-platform"
+    technologies: ["ReactJS (Typescript)", "Redux", "TailwindCSS", "Firebase"],
+    link: "https://zone-restaurant.vercel.app/",
+    github: "https://github.com/FelixAshong/Restaurant-responsive"
   },
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio website showcasing projects and skills.",
-    image: "/projects/portfolio.jpg",
+    title: "movie-house-booking",
+    description: "A movie house booking platform with real-time booking and payment integration.",
+    image: "/projects/HOME PAGE.png",
     category: "UI/UX Design",
     categoryColor: "yellow",
-    technologies: ["React", "Framer Motion", "Tailwind CSS"],
-    link: "https://portfolio.vercel.app",
-    github: "https://github.com/FelixAshong/portfolio"
+    technologies: ["MongoDB", "Express", "Tailwind CSS","ReactJS","NodeJS"],
+    link: "https://www.figma.com/design/c1uAMPfyDyezd7SZExXWJD/MLC?node-id=38-3298&t=4BqV1fwHfOJtlOYA-1",
+    github: "https://github.com/FelixAshong/movie-house-booking"
   },
   {
     title: "Weather App",
