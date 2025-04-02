@@ -1,38 +1,45 @@
 import nodemailer from 'nodemailer';
 import { type InsertContactMessage } from '@shared/schema';
 
-interface EmailError extends Error {
-  code?: string;
-  command?: string;
-  response?: string;
+interface EmailError {
+  code: string;
+  command: string;
+  response: string;
+  responseCode: number;
+  message: string;
 }
 
 let transporter: nodemailer.Transporter | null = null;
 
-function createTransporter() {
+const createTransporter = () => {
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
-    throw new Error('Email configuration is missing. Please check your .env file.');
+    throw new Error('Email configuration is missing');
   }
 
   return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD
-    }
+      pass: process.env.EMAIL_PASSWORD,
+    },
   });
-}
+};
 
-function getTransporter() {
+const getTransporter = () => {
   if (!transporter) {
     transporter = createTransporter();
   }
   return transporter;
-}
+};
 
-const emailTemplate = (data: InsertContactMessage, isReply: boolean = false) => {
+const validateEmail = (email: string): boolean => {
+  // More permissive email validation
+  return Boolean(email && email.includes('@') && email.includes('.'));
+};
+
+const emailTemplate = (data: { name: string; email: string; subject: string; message: string }, isReply: boolean = false) => {
   const { name, email, subject, message } = data;
-  const logoUrl = 'https://delly-portfolio.vercel.app/assets/profile/2.jpg'; // Using your profile image as logo
+  const logoUrl = 'https://delly-portfolio.vercel.app/assets/profile/2.jpg';
 
   return `
     <!DOCTYPE html>
@@ -147,61 +154,81 @@ const emailTemplate = (data: InsertContactMessage, isReply: boolean = false) => 
   `;
 };
 
-export async function sendContactEmail(data: InsertContactMessage) {
+export const sendTestEmail = async () => {
   try {
-    const { name, email, subject, message } = data;
-    
-    // Get or create transporter
-    const emailTransporter = getTransporter();
+    const transporter = getTransporter();
+    const adminEmail = process.env.EMAIL_USER;
 
-    // Log configuration (without sensitive data)
-    console.log('Sending email with config:', {
-      from: process.env.EMAIL_USER,
-      hasAuth: !!process.env.EMAIL_PASSWORD,
-      service: 'gmail'
-    });
+    if (!adminEmail) {
+      throw new Error('Admin email not configured');
+    }
 
-    // Send email to you
-    const mailOptions = {
+    await transporter.sendMail({
       from: {
         name: "Portfolio Contact Form",
-        address: process.env.EMAIL_USER!
+        address: adminEmail
       },
-      to: process.env.EMAIL_USER,
-      replyTo: email,
-      subject: `New Contact Form Message: ${subject}`,
-      html: emailTemplate(data)
-    };
-
-    // Send email
-    console.log('Attempting to send email...');
-    const info = await emailTransporter.sendMail(mailOptions);
-    console.log('Email sent successfully:', info.response);
-
-    // Send confirmation email to the sender
-    const confirmationOptions = {
-      from: {
-        name: "Delly Portfolio",
-        address: process.env.EMAIL_USER!
-      },
-      to: email,
-      subject: `Thank you for contacting Delly - ${subject}`,
-      html: emailTemplate(data, true)
-    };
-
-    await emailTransporter.sendMail(confirmationOptions);
-    console.log('Confirmation email sent successfully');
-
-    return true;
-
-  } catch (error) {
-    const emailError = error as EmailError;
-    console.error('Failed to send email:', {
-      error: emailError.message,
-      code: emailError.code,
-      command: emailError.command,
-      response: emailError.response
+      to: adminEmail,
+      subject: "Test Email from Portfolio",
+      html: `
+        <h2>Test Email</h2>
+        <p>This is a test email from your portfolio contact form.</p>
+        <p>If you're receiving this, the email service is working correctly.</p>
+      `,
     });
-    throw new Error(`Failed to send email: ${emailError.message}`);
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error sending test email:", error);
+    const emailError = error as EmailError;
+    throw new Error(
+      `Failed to send test email: ${emailError.response || emailError.message}`
+    );
   }
-}
+};
+
+export const sendContactEmail = async (data: { name: string; email: string; subject: string; message: string }) => {
+  try {
+    const transporter = getTransporter();
+    const adminEmail = process.env.EMAIL_USER;
+
+    if (!adminEmail) {
+      throw new Error('Admin email not configured');
+    }
+
+    if (!data.email || !data.name) {
+      throw new Error('Name and email are required');
+    }
+
+    // Send email to admin
+    await transporter.sendMail({
+      from: {
+        name: "Portfolio Contact Form",
+        address: adminEmail
+      },
+      to: adminEmail,
+      replyTo: data.email,
+      subject: `New Contact Form Submission: ${data.subject}`,
+      html: emailTemplate(data),
+    });
+
+    // Send thank you email to the submitter
+    await transporter.sendMail({
+      from: {
+        name: "Phleo Delly",
+        address: adminEmail
+      },
+      to: data.email,
+      subject: "Thank you for contacting me!",
+      html: emailTemplate(data, true),
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error sending email:", error);
+    const emailError = error as EmailError;
+    throw new Error(
+      `Failed to send email: ${emailError.response || emailError.message}`
+    );
+  }
+};
