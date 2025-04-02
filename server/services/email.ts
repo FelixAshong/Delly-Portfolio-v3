@@ -12,15 +12,24 @@ interface EmailError {
 let transporter: nodemailer.Transporter | null = null;
 
 const createTransporter = () => {
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
-    throw new Error('Email configuration is missing');
+  const emailUser = process.env.EMAIL_USER;
+  const emailPass = process.env.EMAIL_PASSWORD;
+
+  console.log('Email Configuration:', {
+    hasUser: !!emailUser,
+    hasPassword: !!emailPass,
+    userEmail: emailUser // Log the actual email for debugging
+  });
+
+  if (!emailUser || !emailPass) {
+    throw new Error('Email configuration is missing. Please check EMAIL_USER and EMAIL_PASSWORD environment variables.');
   }
 
   return nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+      user: emailUser,
+      pass: emailPass,
     },
   });
 };
@@ -33,14 +42,15 @@ const getTransporter = () => {
 };
 
 const validateEmail = (email: string): boolean => {
-  // More permissive email validation
   return Boolean(email && email.includes('@') && email.includes('.'));
 };
 
 const emailTemplate = (data: { name: string; email: string; subject: string; message: string }, isReply: boolean = false) => {
   const { name, email, subject, message } = data;
+  
+  // Use a reliable image hosting service URL
   const logoUrl = 'https://i.ibb.co/R4MPF7h/phleo.png';
-
+  
   return `
     <!DOCTYPE html>
     <html>
@@ -68,10 +78,31 @@ const emailTemplate = (data: { name: string; email: string; subject: string; mes
             background-color: #f8f9fa;
             border-bottom: 2px solid #e9ecef;
           }
-          .logo {
-            max-width: 150px;
+          .logo-image {
+            max-width: 200px;
             height: auto;
+            margin: 0 auto 15px;
+            display: block;
+          }
+          .logo-text {
+            font-size: 32px;
+            font-weight: bold;
+            color: #DAA520;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: none;
+          }
+          img[src=""] {
+            display: none;
+          }
+          .logo-image[src=""], .logo-image:not([src]) {
+            display: none;
+          }
+          .logo-image:not([src]) + .logo-text,
+          .logo-image[src=""] + .logo-text,
+          .logo-image.error + .logo-text {
+            display: block;
           }
           .content {
             padding: 30px 20px;
@@ -93,7 +124,7 @@ const emailTemplate = (data: { name: string; email: string; subject: string; mes
           .button {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #007bff;
+            background-color: #DAA520;
             color: #ffffff;
             text-decoration: none;
             border-radius: 4px;
@@ -114,7 +145,12 @@ const emailTemplate = (data: { name: string; email: string; subject: string; mes
       <body>
         <div class="container">
           <div class="header">
-            <img src="${logoUrl}" alt="Delly Logo" class="logo">
+            <img src="${logoUrl}" 
+                 alt="Delly Logo" 
+                 class="logo-image"
+                 onerror="this.classList.add('error')"
+            />
+            <div class="logo-text">PHLEO DELLY</div>
             <h1 style="color: #212529; margin: 0;">${isReply ? 'Reply from Delly' : 'New Contact Form Message'}</h1>
           </div>
           
@@ -163,6 +199,8 @@ export const sendTestEmail = async () => {
       throw new Error('Admin email not configured');
     }
 
+    console.log('Sending test email to:', adminEmail);
+
     await transporter.sendMail({
       from: {
         name: "Portfolio Contact Form",
@@ -170,11 +208,12 @@ export const sendTestEmail = async () => {
       },
       to: adminEmail,
       subject: "Test Email from Portfolio",
-      html: `
-        <h2>Test Email</h2>
-        <p>This is a test email from your portfolio contact form.</p>
-        <p>If you're receiving this, the email service is working correctly.</p>
-      `,
+      html: emailTemplate({
+        name: "Test User",
+        email: adminEmail,
+        subject: "Test Email",
+        message: "This is a test email from your portfolio contact form. If you're receiving this, the email service is working correctly."
+      }),
     });
 
     return { success: true };
@@ -199,6 +238,12 @@ export const sendContactEmail = async (data: { name: string; email: string; subj
     if (!data.email || !data.name) {
       throw new Error('Name and email are required');
     }
+
+    console.log('Sending contact form email:', {
+      from: adminEmail,
+      to: [adminEmail, data.email],
+      subject: data.subject
+    });
 
     // Send email to admin
     await transporter.sendMail({
