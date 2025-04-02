@@ -2,6 +2,7 @@
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,7 +21,7 @@ console.log('Environment Configuration:', {
 // Import other dependencies after environment is loaded
 import express from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic } from "./vite";
+import { setupVite } from "./vite";
 import cors from "cors";
 
 const app = express();
@@ -74,7 +75,7 @@ async function initializeServer() {
     if (process.env.NODE_ENV === "development") {
       await setupVite(app, server);
     } else {
-      serveStatic(app);
+      serveStatic();
     }
     
     return app;
@@ -119,3 +120,17 @@ if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
     }
   })();
 }
+
+const serveStatic = () => {
+  const distPath = path.resolve(__dirname, "..", "dist", "public");
+  console.log("Serving static files from:", distPath);
+  
+  if (!fs.existsSync(distPath)) {
+    throw new Error(`Could not find the build directory: ${distPath}, make sure to build the client first`);
+  }
+
+  app.use(express.static(distPath));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
+  });
+};
