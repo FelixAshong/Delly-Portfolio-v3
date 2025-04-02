@@ -39,7 +39,7 @@ const validateEmail = (email: string): boolean => {
 
 const emailTemplate = (data: { name: string; email: string; subject: string; message: string }, isReply: boolean = false) => {
   const { name, email, subject, message } = data;
-  const logoUrl = 'https://delly-portfolio.vercel.app/assets/profile/2.jpg';
+  const logoUrl = 'https://i.ibb.co/R4MPF7h/phleo.png';
 
   return `
     <!DOCTYPE html>
