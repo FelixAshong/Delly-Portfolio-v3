@@ -166,11 +166,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Location</h3>
-                <p className="text-foreground/80">University of Ghana, Legon</p>
+                <p className="text-foreground/80">International Student Hostel (ISH), University of Ghana, Legon</p>
                 <Button 
                   variant="link" 
                   className="text-primary p-0 h-auto mt-2"
-                  onClick={() => window.open("https://www.google.com/maps?q=University+of+Ghana+Legon", "_blank")}
+                  onClick={() => window.open("https://www.google.com/maps/place/International+Student+Hostel-+ISH/@5.6400274,-0.1851988,17z", "_blank")}
                 >
                   View on map
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
