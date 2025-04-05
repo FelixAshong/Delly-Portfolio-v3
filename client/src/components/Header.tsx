@@ -79,7 +79,7 @@ const Header = () => {
               Hire Me
             </Link>
             <a 
-              href="https://felixashong.netlify.app/"
+              href="https://delly-online-cv.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
