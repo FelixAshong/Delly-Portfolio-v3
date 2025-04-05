@@ -60,7 +60,7 @@ export const PROJECTS = [
   },
   {
     title: "UG visitor-check-in",
-    description: "A collection of utility applications including calculator, todo list, and weather app.",
+    description: "The University of Ghana Visitor Management System is a comprehensive solution for managing visitors on campus. This modern web application provides a streamlined check-in/check-out process, visitor tracking, and advanced security features.",
     image: "/projects/visitor-check-in.png",
     category: "Web Development",
     categoryColor: "blue",
