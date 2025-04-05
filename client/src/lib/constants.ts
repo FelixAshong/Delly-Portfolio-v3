@@ -54,7 +54,7 @@ export const PROJECTS = [
     image: "/projects/counseling-app.png",
     category: "Web Development",
     categoryColor: "red",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+    technologies: ["React", "Node.js", "Tailwind CSS"],
     link: "https://cemar-counselling.vercel.app",
     github: "https://github.com/FelixAshong/cemar-counselling"
   },
