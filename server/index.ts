@@ -23,8 +23,10 @@ import express from "express";
 import { registerRoutes } from "./routes";
 import { setupVite } from "./vite";
 import cors from "cors";
+import http from "http";
 
 const app = express();
+const server = http.createServer(app);
 
 app.use(cors());
 app.use(express.json());
@@ -70,7 +72,7 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
 // Initialize server
 async function initializeServer() {
   try {
-    const server = await registerRoutes(app);
+    await registerRoutes(app);
     
     if (process.env.NODE_ENV === "development") {
       await setupVite(app, server);
@@ -100,10 +102,10 @@ export default async function handler(req: any, res: any) {
 if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
   (async () => {
     try {
-      const app = await initializeServer();
+      await initializeServer();
       const port = process.env.PORT || 3000;
       
-      app.listen(port, () => {
+      server.listen(port, () => {
         console.log('\n🚀 Server is running!');
         console.log(`📝 Environment: ${process.env.NODE_ENV}`);
         console.log(`📧 Email configured: ${!!process.env.EMAIL_USER && !!process.env.EMAIL_PASSWORD}`);

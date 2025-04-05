@@ -2,57 +2,38 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { createServer as createViteServer, createLogger, ServerOptions } from "vite";
-import { nanoid } from "nanoid";
+import { createServer as createViteServer } from "vite";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const viteLogger = createLogger();
-
-function log(message: string, source = "express") {
-  const formattedTime = new Date().toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
-  console.log(`${formattedTime} [${source}] ${message}`);
-}
-
 export async function setupVite(app: express.Application, server: any) {
-  const serverOptions: ServerOptions = {
-    middlewareMode: true,
-    hmr: { server },
-    host: true,
-  };
-
   const vite = await createViteServer({
-    configFile: path.resolve(__dirname, "..", "client", "vite.config.ts"),
-    customLogger: {
-      ...viteLogger,
-      error: (msg, options) => {
-        viteLogger.error(msg, options);
-        process.exit(1);
-      },
+    server: { 
+      middlewareMode: true,
+      hmr: false, // Disable HMR completely
     },
-    server: serverOptions,
-    appType: "custom",
+    appType: 'spa',
+    root: path.resolve(__dirname, "..", "client"),
   });
 
+  // Use vite's connect instance as middleware
   app.use(vite.middlewares);
 
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
     try {
-      const clientTemplate = path.resolve(__dirname, "..", "client", "index.html");
-      let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`
+      // Read index.html
+      let template = fs.readFileSync(
+        path.resolve(__dirname, "..", "client", "index.html"),
+        "utf-8"
       );
-      const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+
+      // Apply Vite HTML transforms
+      template = await vite.transformIndexHtml(url, template);
+
+      // Send transformed HTML
+      res.status(200).set({ "Content-Type": "text/html" }).end(template);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
@@ -61,7 +42,7 @@ export async function setupVite(app: express.Application, server: any) {
 }
 
 export function serveStatic(app: express.Application) {
-  const distPath = path.resolve(__dirname, "..", "client", "dist");
+  const distPath = path.resolve(__dirname, "..", "dist", "public");
   
   if (!fs.existsSync(distPath)) {
     throw new Error(

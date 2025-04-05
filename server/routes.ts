@@ -1,12 +1,11 @@
 import type { Express, Request, Response } from "express";
-import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { contactMessageSchema } from "@shared/schema";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { sendContactEmail } from "./services/email";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export async function registerRoutes(app: Express): Promise<void> {
   // Health check endpoint
   app.get("/api/health", (req: Request, res: Response) => {
     return res.status(200).json({ status: "ok" });
@@ -65,7 +64,4 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
-
-  const httpServer = createServer(app);
-  return httpServer;
 }
