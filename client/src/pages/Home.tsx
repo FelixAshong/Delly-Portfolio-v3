@@ -84,8 +84,9 @@ const Home = () => {
       >
         <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">What I Do</h2>
         <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-8 md:mb-12 px-4">
-          I build beautiful, functional, and user-friendly websites and web applications using modern technologies.
-          My goal is to create digital solutions that help businesses grow and provide users with exceptional experiences.
+          I build beautiful, functional, and user-friendly websites, web applications, and software solutions using modern technologies.
+          My goal is to create robust digital solutions that help businesses grow, streamline operations, and provide users with exceptional experiences.
+          Whether it's a responsive website, a complex web application, or enterprise software, I focus on delivering high-quality, scalable solutions that meet both business and user needs.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 px-4">
