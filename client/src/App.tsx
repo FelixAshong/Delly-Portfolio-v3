@@ -1,8 +1,8 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
+import { AnimatePresence } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import About from "@/pages/About";
 import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact";
@@ -11,19 +11,31 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import CursorPatternBackground from "@/components/CursorPatternBackground";
+import Loading from "@/components/Loading";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import { Suspense } from "react";
+import About from './pages/About';
 
 function Router() {
+  const [location] = useLocation();
+
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/skills" component={Skills} />
-      <Route path="/projects" component={Projects} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/cv" component={CV} />
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
+    <AnimatePresence mode="wait">
+      <ErrorBoundary>
+        <Suspense fallback={<Loading />}>
+          <Switch location={location}>
+            <Route path="/" component={Home} />
+            <Route path="/About" component={About} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/cv" component={CV} />
+            {/* Fallback to 404 */}
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
+    </AnimatePresence>
   );
 }
 

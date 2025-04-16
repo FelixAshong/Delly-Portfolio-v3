@@ -43,19 +43,19 @@ const About: React.FC = () => {
           className="space-y-6"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-            A FULL-STACK WEB DEVELOPER
+            A FULL-STACK WEB & SOFTWARE DEVELOPER
             <br />
             BASED IN GHANA 🇬🇭
           </h2>
           
           <p className="text-muted-foreground text-sm sm:text-base">
             Hi there! 👋 I'm Felix Ashong, a passionate and creative Full-Stack Web
-            developer with a love for building cool things. My journey in the tech world
+            and Software developer with a love for building cool things. My journey in the tech world
             has been filled with exciting projects and continuous learning.
           </p>
 
           <p className="text-muted-foreground text-sm sm:text-base">
-            I specialize in creating responsive, user-friendly web applications using
+            I specialize in creating responsive, user-friendly web applications and robust software solutions using
             modern technologies. With a strong foundation in both frontend and
             backend development, I can bring your ideas to life from concept to
             deployment.

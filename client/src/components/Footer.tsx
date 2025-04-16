@@ -19,7 +19,7 @@ const Footer = () => {
               <span className="font-heading font-bold text-2xl text-foreground dark:text-white hidden md:inline ml-2">PhleoDelly</span>
             </div>
             <p className="text-muted-foreground">
-              Creating modern web solutions that bring ideas to life.
+              Creating modern web and software solutions that bring ideas to life.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

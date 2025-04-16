@@ -1,14 +1,15 @@
 # 🚀 Delly Portfolio v3
 
-A modern, responsive portfolio website built with Next.js and TypeScript.
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
 
 - 🎨 Modern and clean design
-- 📱 Fully responsive layout
-- ⚡ Fast performance with Next.js
-- 🎯 SEO optimized
-- 🌙 Dark/Light mode support
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive
+- ⚡ Fast and optimized performance
+- 🎭 Smooth animations and transitions
+- 🔍 SEO optimized
 - 📊 Animated skill bars
 - 🖼️ Project showcase
 - 💬 Contact form with email integration
@@ -16,12 +17,13 @@ A modern, responsive portfolio website built with Next.js and TypeScript.
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js
+- **Framework:** React
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Icons:** Remix Icons
 - **Animations:** Framer Motion
 - **Email Service:** Nodemailer
+- **Routing:** Wouter
 - **Deployment:** Vercel
 
 ## 📍 Location
@@ -39,32 +41,61 @@ University of Ghana, Legon
 
 ## 🚀 Getting Started
 
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm (v7 or higher)
+
+### Installation
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/FelixAshong/Delly-Portfolio-v3.git
+cd Delly-Portfolio-v3
 ```
 
 2. Install dependencies:
 ```bash
-cd Delly-Portfolio-v3
+cd client
 npm install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the root directory with:
-```env
-EMAIL_USER=your.email@gmail.com
-EMAIL_PASSWORD=your_app_password
-PORT=4000
-NODE_ENV=production
-```
+### Running the Application
 
-4. Run the development server:
+#### Development Mode
+
+To run the application in development mode with hot reloading:
+
 ```bash
+cd client
 npm run dev
 ```
 
-5. Open [http://localhost:4000](http://localhost:4000) in your browser.
+This will start the development server at [http://localhost:5173](http://localhost:5173)
+
+#### Production Mode
+
+To build and preview the production version:
+
+1. Build the application:
+```bash
+cd client
+npm run build
+```
+
+2. Preview the production build:
+```bash
+npm run preview
+```
+
+This will start a preview server at [http://localhost:4173](http://localhost:4173)
+
+### Important Notes
+
+- Always run commands from the `client` directory
+- The development server (dev mode) provides hot reloading for faster development
+- The preview server (production mode) shows exactly how the site will look when deployed
+- Make sure to rebuild (`npm run build`) after making changes to see them in production mode
 
 ## 📁 Project Structure
 
@@ -101,18 +132,19 @@ The portfolio is fully responsive and optimized for:
 
 ## 🔧 Built With
 
-- [Next.js](https://nextjs.org/) - React framework
+- [React](https://reactjs.org/) - JavaScript library
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Remix Icons](https://remixicon.com/) - Icon library
 - [Framer Motion](https://www.framer.com/motion/) - Animations
 - [Nodemailer](https://nodemailer.com/) - Email service
+- [Wouter](https://github.com/molefrog/wouter) - Routing
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## �� Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/FelixAshong/Delly-Portfolio-v3/issues).
 
@@ -126,8 +158,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check [iss
 
 ## 🙏 Acknowledgments
 
-- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Remix Icons](https://remixicon.com/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [Nodemailer](https://nodemailer.com/) 
+- [Nodemailer](https://nodemailer.com/)
+- [Wouter](https://github.com/molefrog/wouter) 

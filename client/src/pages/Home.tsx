@@ -30,7 +30,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md:text-3xl font-bold text-foreground mb-3 md:mb-4"
             >
-              Full-Stack Web Developer
+              Full-Stack Web & Software Developer
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto md:mx-0"
             >
-              I specialize in creating modern, responsive web applications that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment.
+              I specialize in creating modern, responsive web applications and robust software solutions that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment.
             </motion.p>
           </div>
           
@@ -103,7 +103,7 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Application Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">Software Development</h3>
             <p className="text-muted-foreground">
               Building feature-rich web applications with clean architecture, efficient data management, and intuitive user interfaces.
             </p>

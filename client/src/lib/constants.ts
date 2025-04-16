@@ -8,10 +8,21 @@ export const FRONTEND_SKILLS = [
 
 export const BACKEND_SKILLS = [
   { name: "Node.js", percentage: 90 },
-  { name: "Express.js", percentage: 70 },
-  { name: "MongoDB", percentage: 50 },
-  { name: "SQL Databases", percentage: 50 },
-  { name: "GraphQL", percentage: 45 }
+  { name: "Express.js", percentage: 85 },
+  { name: "MongoDB", percentage: 80 },
+  { name: "SQL Databases", percentage: 75 },
+  { name: "GraphQL", percentage: 70 },
+  { name: "RESTful APIs", percentage: 85 },
+  { name: "Microservices", percentage: 75 }
+];
+
+export const SOFTWARE_SKILLS = [
+  { name: "System Architecture", percentage: 85 },
+  { name: "Design Patterns", percentage: 80 },
+  { name: "Data Structures", percentage: 85 },
+  { name: "Algorithms", percentage: 80 },
+  { name: "Testing & QA", percentage: 75 },
+  { name: "CI/CD", percentage: 80 }
 ];
 
 export const TOOLS = [
@@ -26,16 +37,6 @@ export const TOOLS = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   { 
-    name: "Photoshop", 
-    percentage: 60,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
-  },
-  { 
-    name: "Figma", 
-    percentage: 88,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-  },
-  { 
     name: "Node.js", 
     percentage: 92,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
@@ -44,67 +45,77 @@ export const TOOLS = [
     name: "VS Code", 
     percentage: 90,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+  },
+  { 
+    name: "Docker", 
+    percentage: 75,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+  },
+  { 
+    name: "Postman", 
+    percentage: 85,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
   }
 ];
 
 export const PROJECTS = [
   {
     title: "cemar-counselling",
-    description: "A comprehensive counselling platform with real-time chat, appointment scheduling, and resource management.",
+    description: "A comprehensive counselling platform with real-time chat, appointment scheduling, and resource management. Built with modern software architecture principles and scalable backend services.",
     image: "/projects/counseling-app.png",
-    category: "Web Development",
+    category: "web Development",
     categoryColor: "red",
-    technologies: ["React", "Node.js", "Tailwind CSS"],
+    technologies: ["React", "Node.js", "MongoDB", "WebSocket", "JWT Auth"],
     link: "https://cemar-counselling.vercel.app",
     github: "https://github.com/FelixAshong/cemar-counselling"
   },
   {
     title: "UG visitor-check-in",
-    description: "The University of Ghana Visitor Management System is a comprehensive solution for managing visitors on campus. This modern web application provides a streamlined check-in/check-out process, visitor tracking, and advanced security features.",
+    description: "A robust visitor management system with advanced security features, real-time tracking, and automated notifications. Implemented with microservices architecture and secure authentication.",
     image: "/projects/visitor-check-in.png",
-    category: "Web Development",
+    category: "Software Development",
     categoryColor: "blue",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis"],
     link: "https://v0-animated-react-ui.vercel.app/",
     github: "https://github.com/FelixAshong/visitor-check-in"
   },
   {
     title: "kthtelemedicine (Korle-Bu)",
-    description: "This project aims to develop a web-based telemedicine platform for the Korle-Bu Teaching Hospital (KBTH) to enable remote patient monitoring, virtual consultations, and efficient healthcare delivery.",
+    description: "A secure telemedicine platform with HIPAA compliance, real-time video consultations, and patient data management. Built with focus on security and scalability.",
     image: "/projects/hospital-management.jpg",
-    category: "Web Development",
+    category: "Software Development",
     categoryColor: "green",
-    technologies: ["React", "Node.js", "PostgreSQL"],
+    technologies: ["React", "Node.js", "PostgreSQL", "WebRTC", "OAuth2"],
     link: "https://v0-telemedicine-platform.vercel.app/",
     github: "https://github.com/FelixAshong/kthtelemedicine"
   },
   {
     title: "Bentilzone Online Restaurant App",
-    description: "A full-featured Bentilzone Online Restaurant App platform with shopping cart and payment integration.",
+    description: "A full-featured restaurant management system with real-time order processing, inventory management, and analytics dashboard.",
     image: "/projects/Restaurant.png",
     category: "Web Development",
     categoryColor: "purple",
-    technologies: ["ReactJS (Typescript)", "Redux", "TailwindCSS", "Firebase"],
+    technologies: ["React", "Redux", "Firebase", "Stripe", "WebSocket"],
     link: "https://zone-restaurant.vercel.app/",
     github: "https://github.com/FelixAshong/Restaurant-responsive"
   },
   {
     title: "movie-house-booking",
-    description: "A movie house booking platform with real-time booking and payment integration.",
+    description: "A scalable movie booking system with real-time seat availability, payment processing, and admin dashboard.",
     image: "/projects/HOME PAGE.png",
     category: "UI/UX Design",
     categoryColor: "yellow",
-    technologies: ["MongoDB", "Express", "Tailwind CSS","ReactJS","NodeJS"],
+    technologies: ["MongoDB", "Express", "React", "Node.js", "Stripe API"],
     link: "https://www.figma.com/design/c1uAMPfyDyezd7SZExXWJD/MLC?node-id=38-3298&t=4BqV1fwHfOJtlOYA-1",
     github: "https://github.com/FelixAshong/movie-house-booking"
   },
   {
     title: "Foodie - Food Delivery App",
-    description: "A food delivery app with real-time order tracking and payment integration.",
+    description: "A real-time food delivery platform with order tracking, payment integration, and driver management system.",
     image: "/projects/mobile.jpg",
     category: "Mobile Apps",
     categoryColor: "orange",
-    technologies: ["React Native", "Expo"],
+    technologies: ["React Native", "Node.js", "MongoDB", "Socket.io", "Stripe"],
     link: "https://github.com/FelixAshong/foodie",
     github: "https://github.com/FelixAshong/foodie"
   }
@@ -141,6 +152,18 @@ export const SERVICES = [
       "TypeScript Implementation",
       "Responsive Design",
       "Performance Optimization"
+    ]
+  },
+  {
+    title: "Software Development",
+    description: "Developing robust and scalable software solutions for various platforms and industries.",
+    features: [
+      "Full-stack Development",
+      "API Design & Development",
+      "Database Architecture",
+      "System Integration",
+      "Performance Optimization",
+      "Security Implementation"
     ]
   },
   {
