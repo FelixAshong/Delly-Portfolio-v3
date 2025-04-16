@@ -62,14 +62,16 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                />
+              <div className="relative w-full h-48 overflow-hidden group">
+                <div className="h-full w-full overflow-y-auto scrollbar-hide">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="absolute top-4 right-4">
                   <span
                     className={`px-3 py-1 rounded-full text-sm font-medium ${
