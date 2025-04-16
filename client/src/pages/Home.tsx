@@ -106,7 +106,8 @@ const Home = () => {
             </div>
             <h3 className="text-xl font-bold mb-4 text-foreground">Software Development</h3>
             <p className="text-muted-foreground">
-              Building feature-rich web applications with clean architecture, efficient data management, and intuitive user interfaces.
+              Building robust software solutions with clean architecture, efficient data management, and scalable infrastructure.
+              From desktop applications to enterprise systems, I focus on creating reliable and maintainable software that solves real-world problems.
             </p>
           </div>
           
