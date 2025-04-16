@@ -20,7 +20,7 @@ const CV = () => {
       // Create a link element
       const link = document.createElement('a');
       link.href = blobUrl;
-      link.download = '/client/public/assets/CV.pdf';
+      link.download = 'Felix CV.pdf';
       
       // Append to body and click
       document.body.appendChild(link);

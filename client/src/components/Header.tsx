@@ -1,9 +1,12 @@
 import { Link, useLocation } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [location] = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
@@ -33,7 +36,7 @@ const Header = () => {
             <span className="font-heading font-bold text-xl md:text-2xl text-foreground">PhleoDelly</span>
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
@@ -62,25 +65,86 @@ const Header = () => {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-4">
-            <Link 
-              href="/contact"
-              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
-              style={{ background: "#2563eb" }}
-            >
-              Hire Me
-            </Link>
-            <a 
-              href="https://delly-cv.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
-              style={{ background: "#f97316" }}
-            >
-              Online CV
-            </a>
+            <div className="hidden md:flex items-center gap-4">
+              <Link 
+                href="/contact"
+                className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
+                style={{ background: "#2563eb" }}
+              >
+                Hire Me
+              </Link>
+              <a 
+                href="https://delly-cv.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="crystal-btn text-white px-4 py-2 rounded text-sm font-medium whitespace-nowrap"
+                style={{ background: "#f97316" }}
+              >
+                Online CV
+              </a>
+            </div>
             <ThemeToggle />
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.nav
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden"
+            >
+              <div className="py-4 space-y-4">
+                {navItems.map((item) => (
+                  <Link key={item.path} href={item.path}>
+                    <motion.a
+                      className={`block px-4 py-2 text-base font-medium transition-colors ${
+                        location === item.path
+                          ? "text-primary"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </motion.a>
+                  </Link>
+                ))}
+                <div className="px-4 space-y-2">
+                  <Link 
+                    href="/contact"
+                    className="block crystal-btn text-white px-4 py-2 rounded text-sm font-medium text-center"
+                    style={{ background: "#2563eb" }}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Hire Me
+                  </Link>
+                  <a 
+                    href="https://delly-cv.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block crystal-btn text-white px-4 py-2 rounded text-sm font-medium text-center"
+                    style={{ background: "#f97316" }}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Online CV
+                  </a>
+                </div>
+              </div>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
