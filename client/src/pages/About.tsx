@@ -42,7 +42,7 @@ const About: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="space-y-6"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-2xl font-bold text-foreground">
             A FULL-STACK WEB & SOFTWARE DEVELOPER
             <br />
             BASED IN GHANA 🇬🇭
