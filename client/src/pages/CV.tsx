@@ -233,8 +233,8 @@ const CV = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">CERTIFICATES</h3>
                   <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                    <li>ALX AI Career Essentials</li>
-                    <li>Prodigee Edtech UI/UX Design Certified</li>
+                    <li>ALX AI Career Essentials Certified</li>
+                    <li>Prodigee Edtech UI/UX Design </li>
                   </ul>
                 </div>
 
