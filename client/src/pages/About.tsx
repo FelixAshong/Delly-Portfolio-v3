@@ -43,7 +43,7 @@ const About: React.FC = () => {
           className="space-y-6"
         >
           <h2 className="text-2xl sm:text-2xl font-bold text-foreground">
-            A FULL-STACK WEB & SOFTWARE DEVELOPER
+            A Front-End Developer | Full Stack Web Developer
             <br />
             BASED IN GHANA 🇬🇭
           </h2>

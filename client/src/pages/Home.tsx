@@ -30,7 +30,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md:text-3xl font-bold text-foreground mb-3 md:mb-4"
             >
-              Full-Stack Web & Software Developer
+              Front-End Developer | Full Stack Web Developer
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
