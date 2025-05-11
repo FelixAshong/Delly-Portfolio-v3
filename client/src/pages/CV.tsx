@@ -177,8 +177,7 @@ const CV = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">PROFESSIONAL SUMMARY</h3>
                   <p className="text-foreground/80">
-                    A results-oriented individual with a passion for continuous learning and innovation, known for leveraging analytical thinking and creativity to solve problems and deliver high-impact solutions in fast-paced environments. Also a motivated student eager to apply classroom knowledge to real-world experiences, with a strong willingness to learn and contribute. Effective communicator with a collaborative mindset, ready to bring fresh perspectives and a strong work ethic to any team.
-                  </p>
+                  A results-oriented individual and a motivated student eager to apply classroom knowledge to real-world experiences, with a strong willingness to learn and contribute. Effective communicator with a collaborative mindset, ready to bring fresh perspectives and a strong work ethic to any team.                  </p>
                 </div>
                 
                 <div>
