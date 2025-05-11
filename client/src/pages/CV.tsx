@@ -171,7 +171,8 @@ const CV = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-foreground mb-4">Front-End Developer</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Front-End Developer | Full Stack Web Developer
+              </h2>
               
               <div className="space-y-6">
                 <div>
@@ -259,7 +260,7 @@ const CV = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-primary mb-2">Phone</h3>
-                  <p className="text-foreground/80">0545551579</p>
+                  <p className="text-foreground/80">0593125279</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-primary mb-2">Email</h3>

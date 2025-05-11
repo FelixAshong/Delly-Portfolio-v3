@@ -116,11 +116,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Email</h3>
-                <p className="text-foreground/80">phleodelly@gmail.com</p>
+                <p className="text-foreground/80">felixashong4@gmail.com</p>
                 <Button 
                   variant="link" 
                   className="text-primary p-0 h-auto mt-2"
-                  onClick={() => window.location.href = "mailto:phleodelly@gmail.com"}
+                  onClick={() => window.location.href = "mailto:felixashong4@gmail.com"}
                 >
                   Send an email
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -141,11 +141,11 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-foreground font-bold mb-1">Phone</h3>
-                <p className="text-foreground/80">+233 123 456 789</p>
+                <p className="text-foreground/80">+233 59 312 5279</p>
                 <Button 
                   variant="link" 
                   className="text-primary p-0 h-auto mt-2"
-                  onClick={() => window.location.href = "tel:+233123456789"}
+                  onClick={() => window.location.href = "tel:+233593125279"}
                 >
                   Make a call
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
