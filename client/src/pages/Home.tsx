@@ -38,7 +38,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto md:mx-0"
             >
-              I specialize in creating modern, responsive web applications and robust software solutions that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment.
+              I specialize in creating modern, responsive web applications and robust websites designs that deliver exceptional user experiences. With expertise in both frontend and backend technologies, I build complete solutions from concept to deployment.
             </motion.p>
           </div>
           
@@ -84,9 +84,9 @@ const Home = () => {
       >
         <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">What I Do</h2>
         <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-8 md:mb-12 px-4">
-          I build beautiful, functional, and user-friendly websites, web applications, and software solutions using modern technologies.
+          I build beautiful, functional, and user-friendly websites and web applications using modern technologies.
           My goal is to create robust digital solutions that help businesses grow, streamline operations, and provide users with exceptional experiences.
-          Whether it's a responsive website, a complex web application, or enterprise software, I focus on delivering high-quality, scalable solutions that meet both business and user needs.
+          Whether it's a responsive website, a complex web application, or websites designs, I focus on delivering high-quality, scalable solutions that meet both business and user needs.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 px-4">
@@ -104,10 +104,10 @@ const Home = () => {
             <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-6 hover-scale">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Software Development</h3>
+            <h3 className="text-xl font-bold mb-4 text-foreground">Web Application Development</h3>
             <p className="text-muted-foreground">
-              Building robust software solutions with clean architecture, efficient data management, and scalable infrastructure.
-              From desktop applications to enterprise systems, I focus on creating reliable and maintainable software that solves real-world problems.
+              Crafting dynamic web applications with modern frameworks, responsive design, and seamless user experiences.
+              From single-page applications to full-stack solutions, I focus on creating scalable and maintainable web applications that meet user needs.
             </p>
           </div>
           
@@ -117,9 +117,8 @@ const Home = () => {
             </div>
             <h3 className="text-xl font-bold mb-4 text-foreground">Web Design & UI/UX</h3>
             <p className="text-muted-foreground">
-           Crafting visually appealing and user-friendly interfaces to enhance user experience and engagement.
-          </p>
-
+              Designing intuitive and engaging web interfaces that enhance user experience and drive engagement.
+            </p>
           </div>
         </div>
       </motion.section>

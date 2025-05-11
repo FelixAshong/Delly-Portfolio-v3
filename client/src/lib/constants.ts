@@ -10,10 +10,7 @@ export const BACKEND_SKILLS = [
   { name: "Node.js", percentage: 90 },
   { name: "Express.js", percentage: 85 },
   { name: "MongoDB", percentage: 80 },
-  { name: "SQL Databases", percentage: 75 },
-  { name: "GraphQL", percentage: 70 },
-  { name: "RESTful APIs", percentage: 85 },
-  { name: "Microservices", percentage: 75 }
+  { name: "RESTful APIs", percentage: 85 }
 ];
 
 export const SOFTWARE_SKILLS = [
@@ -47,14 +44,14 @@ export const TOOLS = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
   },
   { 
-    name: "Docker", 
-    percentage: 75,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+    name: "Figma", 
+    percentage: 80,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
   },
   { 
-    name: "Postman", 
+    name: "Webpack", 
     percentage: 85,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
   }
 ];
 
